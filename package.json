@@ -1,0 +1,24 @@
+{
+  "name": "Summer1400-FE-Team10",
+  "version": "1.0.0",
+  "description": "Summer 1400\r Front-End",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Star-Academy/Summer1400-FE-Team10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Star-Academy/Summer1400-FE-Team10/issues"
+  },
+  "homepage": "https://github.com/Star-Academy/Summer1400-FE-Team10#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "prettier": "^2.3.2"
+  }
+}
