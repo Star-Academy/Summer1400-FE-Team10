@@ -16,9 +16,8 @@
   "bugs": {
     "url": "https://github.com/Star-Academy/Summer1400-FE-Team10/issues"
   },
-  "homepage": "https://github.com/Star-Academy/Summer1400-FE-Team10#readme",
+  "homepage": "https://star-academy.github.io/Summer1400-FE-Team10/pages/home.html",
   "devDependencies": {
-    "live-server": "^1.2.1",
     "prettier": "^2.3.2"
   }
 }
