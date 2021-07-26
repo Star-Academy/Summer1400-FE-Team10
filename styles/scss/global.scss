@@ -1,9 +1,13 @@
+@import url('../../res/fonts/shabnam/Shabnam-Medium-FD.ttf');
+
 * {
   box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
+  font-family: shabnam;
+  direction: rtl;
 }
 
 html > * {
@@ -16,7 +20,45 @@ body {
   background-color: white;
 }
 
-body > .main-header {
+.main-header {
   height: 7rem;
-  display: flex;
+  background-color: yellow; // #1a1a1a;
+  $nav-spacing: 3rem;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 120rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__logo-container {
+    height: 100%;
+    width: 16rem;
+    display: grid;
+    align-items: center;
+    color: blue;
+    padding: 0 $nav-spacing;
+  }
+
+  &__nav > ul {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: 0;
+
+    & li {
+      height: 100%;
+      padding: 2.6rem $nav-spacing;
+      list-style-type: none;
+
+      & > a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
 }
