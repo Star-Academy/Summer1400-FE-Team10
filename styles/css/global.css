@@ -1,4 +1,9 @@
-@import url("../../res/fonts/shabnam/Shabnam-Medium-FD.ttf");
+:root {
+  --mobile: (min-width: 0px);
+  --tablet: (min-width: 992px);
+  --desktop: (min-width: 1200px);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +12,7 @@ html {
   font-size: 62.5%;
   font-family: shabnam;
   direction: rtl;
+  overflow-x: hidden;
 }
 
 html > * {
@@ -20,40 +26,145 @@ body {
 }
 
 .main-header {
-  height: 7rem;
-  background-color: yellow;
+  height: 8rem;
+  background-color: #1a1a1a;
+  position: relative;
+  user-select: none;
+  z-index: 10;
 }
 .main-header__inner {
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  max-width: 120rem;
+  max-width: 110rem;
   height: 100%;
   width: 100%;
 }
 .main-header__logo-container {
   height: 100%;
-  width: 16rem;
   display: grid;
   align-items: center;
-  color: blue;
-  padding: 0 3rem;
+  padding: 0 1.8rem;
+  color: #e6e6e6;
+  transition: color 0.12s ease-out;
+}
+.main-header__logo-container:hover {
+  color: #00c3ff;
+}
+.main-header__logo-container__logo {
+  height: calc(2rem * 1.7);
+  width: calc(6.3rem * 1.7);
+}
+.main-header__nav {
+  display: none;
 }
 .main-header__nav > ul {
   display: flex;
   flex-direction: row;
+  align-items: center;
   height: 100%;
+  padding: 0;
   margin: 0;
 }
 .main-header__nav > ul li {
-  height: 100%;
-  padding: 2.6rem 3rem;
   list-style-type: none;
+  height: 100%;
 }
 .main-header__nav > ul li > a {
+  display: block;
+  height: 100%;
+  padding: 0 1.8rem;
+  line-height: 8rem;
+  font-size: 1.6rem;
+  font-weight: 500;
   text-decoration: none;
-  color: white;
+  color: #e6e6e6;
+  transition: all 0.12s ease-out;
+  transition-property: color, padding;
+}
+.main-header__nav > ul li > a:hover {
+  color: #00c3ff;
+}
+.main-header__nav__seperator {
+  width: 0.1rem;
+  height: 1.8rem !important;
+  margin: 0 1.8rem;
+  background-color: #e6e6e6;
+}
+.main-header__hamburger-container {
+  background: none;
+  border: none;
+  padding: 0 1.8rem;
+  line-height: 6.6rem;
+  cursor: pointer;
+  display: block;
+}
+.main-header__hamburger-container__hamburger {
+  color: #e6e6e6;
+  transition: color 0.12s ease-out;
+  width: 2.6rem;
+  height: 2.6rem;
+}
+.main-header__hamburger-container:hover .main-header__hamburger-container__hamburger {
+  color: #00c3ff;
+}
+.main-header__hamburger-container > input:checked + svg + div > .ham-menu-container__ham-menu {
+  transform: translateX(0);
+}
+
+.ham-menu-container {
+  width: 0;
+  height: 0;
+}
+.ham-menu-container__ham-menu {
+  position: fixed;
+  z-index: 5;
+  width: 40rem;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  background-color: black;
+}
+
+@media (min-width: 0px) {
+  .main-header {
+    height: 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .main-header {
+    height: 8rem;
+  }
+  .main-header__inner {
+    max-width: 96rem;
+  }
+  .main-header__nav {
+    display: initial;
+  }
+  .main-header__hamburger-container {
+    display: none;
+  }
+  .main-header__logo-container__logo {
+    height: calc(2rem * 2.2);
+    width: calc(6.3rem * 2.2);
+  }
+}
+@media (min-width: 1200px) {
+  .main-header__inner {
+    max-width: 117rem;
+  }
+}
+.colorpalletes {
+  color: #d8318a;
+  color: #f26c7d;
+  color: #e37439;
+  color: #4daaa7;
+  color: #3f8f8b;
+  color: #333333;
 }
 
 /*# sourceMappingURL=global.css.map */

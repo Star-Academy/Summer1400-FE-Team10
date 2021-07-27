@@ -1,4 +1,13 @@
-@import url('../../res/fonts/shabnam/Shabnam-Medium-FD.ttf');
+//@import url('../../res/fonts/shabnam/Shabnam-Medium-FD.ttf');
+
+:root {
+  --mobile: (min-width: 0px);
+  --tablet: (min-width: 992px);
+  --desktop: (min-width: 1200px);
+}
+$mobile: '(min-width: 0px)';
+$tablet: '(min-width: 992px)';
+$desktop: '(min-width: 1200px)';
 
 * {
   box-sizing: border-box;
@@ -8,6 +17,7 @@ html {
   font-size: 62.5%;
   font-family: shabnam;
   direction: rtl;
+  overflow-x: hidden;
 }
 
 html > * {
@@ -21,44 +31,179 @@ body {
 }
 
 .main-header {
-  height: 7rem;
-  background-color: yellow; // #1a1a1a;
-  $nav-spacing: 3rem;
+  $height: 8rem;
+  height: $height;
+  background-color: #1a1a1a;
+  position: relative;
+  $nav-spacing: 1.8rem;
+  $nav-top-spacing: 2.9rem;
+  $base-color: #e6e6e6;
+  $hover-color: #00c3ff;
+  $trans: 0.12s ease-out;
+  user-select: none;
+  z-index: 10;
 
   &__inner {
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: auto;
-    max-width: 120rem;
+    max-width: 110rem;
     height: 100%;
     width: 100%;
   }
 
   &__logo-container {
     height: 100%;
-    width: 16rem;
     display: grid;
     align-items: center;
-    color: blue;
     padding: 0 $nav-spacing;
+    color: $base-color;
+    transition: color $trans;
+    &:hover {
+      color: $hover-color;
+    }
+
+    &__logo {
+      $scale: 1.7;
+      height: calc(2rem * #{$scale});
+      width: calc(6.3rem * #{$scale});
+    }
   }
 
-  &__nav > ul {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    margin: 0;
+  &__nav {
+    display: none;
 
-    & li {
+    & > ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       height: 100%;
-      padding: 2.6rem $nav-spacing;
-      list-style-type: none;
+      padding: 0;
+      margin: 0;
 
-      & > a {
-        text-decoration: none;
-        color: white;
+      & li {
+        list-style-type: none;
+        height: 100%;
+        & > a {
+          display: block;
+          height: 100%;
+          padding: 0 $nav-spacing;
+          line-height: $height;
+          font-size: 1.6rem;
+          font-weight: 500;
+
+          text-decoration: none;
+          color: $base-color;
+          transition: all $trans;
+          transition-property: color, padding;
+
+          &:hover {
+            color: $hover-color;
+          }
+        }
+      }
+    }
+    &__seperator {
+      width: 0.1rem;
+      height: 1.8rem !important;
+      margin: 0 $nav-spacing;
+      background-color: $base-color;
+    }
+  }
+  &__hamburger-container {
+    background: none;
+    border: none;
+    padding: 0 $nav-spacing;
+    line-height: 6.6rem;
+    cursor: pointer;
+    display: block;
+
+    &__hamburger {
+      color: $base-color;
+      transition: color $trans;
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+    &:hover &__hamburger {
+      color: $hover-color;
+    }
+    & > input {
+      //display: none;
+
+      &:checked {
+        & + svg + div {
+          & > .ham-menu-container__ham-menu {
+            transform: translateX(0);
+          }
+        }
       }
     }
   }
+}
+
+.ham-menu-container {
+  width: 0;
+  height: 0;
+
+  &__ham-menu {
+    $mobile-height: 0;
+    position: fixed;
+    z-index: 5;
+    width: 40rem;
+    height: 100vh;
+    top: $mobile-height;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    background-color: black;
+  }
+}
+
+@media #{$mobile} {
+  .main-header {
+    $height: 5rem;
+    height: $height;
+  }
+}
+
+@media #{$tablet} {
+  .main-header {
+    $height: 8rem;
+    height: $height;
+    &__inner {
+      max-width: 96rem;
+    }
+    &__nav {
+      display: initial;
+    }
+    &__hamburger-container {
+      display: none;
+    }
+
+    &__logo-container__logo {
+      $scale: 2.2;
+      height: calc(2rem * #{$scale});
+      width: calc(6.3rem * #{$scale});
+    }
+  }
+}
+
+@media #{$desktop} {
+  .main-header {
+    &__inner {
+      max-width: 117rem;
+    }
+  }
+}
+
+.colorpalletes {
+  color: #d8318a;
+  color: #f26c7d;
+  color: #e37439;
+
+  color: #4daaa7;
+  color: #3f8f8b;
+  color: #333333;
 }

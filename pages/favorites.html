@@ -4,34 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/css/global.css" />
     <title>Spotify - Songs</title>
   </head>
 
   <body>
     <header class="main-header">
-      <div class="main-header__logo-container">
-        <img src="../res/images/utils/brand-logo.svg" alt="logo" width="180" />
+      <div class="main-header__inner">
+        <a class="main-header__logo-container" href="">
+          <svg class="main-header__logo-container__logo" fill="currentColor">
+            <use xlink:href="../res/images/utils/brand-logo.svg#logo" />
+          </svg>
+        </a>
+        <nav class="main-header__nav">
+          <ul>
+            <li>
+              <a href="">خانه</a>
+            </li>
+            <li>
+              <a href="">آهنگ ها</a>
+            </li>
+            <li>
+              <a href="">دانلود</a>
+            </li>
+            <li class="main-header__nav__seperator"></li>
+            <li>
+              <a href="./favorites.html">موردعلاقه ها</a>
+            </li>
+            <li>
+              <a href="">حساب کاربری</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="main-header__hamburger-container">
+          <svg class="main-header__hamburger-container__hamburger" fill="currentColor">
+            <use xlink:href="../res/images/utils/icons/menu.svg#icon" />
+          </svg>
+        </button>
       </div>
-      <nav class="main-header__nav">
-        <ul>
-          <li>
-            <a href="#">خانه</a>
-          </li>
-          <li>
-            <a href="#">آهنگ ها</a>
-          </li>
-          <li>
-            <a href="">دانلود</a>
-          </li>
-          <li class="main-header__nav__seperator"></li>
-          <li>
-            <a href="./favorites.html">موردعلاقه ها</a>
-          </li>
-          <li>
-            <a href="">حساب کاربری</a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
     <main>

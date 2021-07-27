@@ -4,18 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/css/global.css" />
     <title>Spotify - Login</title>
   </head>
 
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#"></a></li>
-          <li><img src="../res/images/utils/brand-logo.svg" alt="logo" width="180" /></li>
-          <li><a href="#">دانلود نرم افزار</a></li>
-        </ul>
-      </nav>
+    <header class="main-header">
+      <div class="main-header__inner">
+        <a class="main-header__logo-container" href="">
+          <svg class="main-header__logo-container__logo" fill="currentColor">
+            <use xlink:href="../res/images/utils/brand-logo.svg#logo" />
+          </svg>
+        </a>
+
+        <nav class="main-header__nav">
+          <ul>
+            <li>
+              <a href="">دانلود نرم افزار</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <aside>
