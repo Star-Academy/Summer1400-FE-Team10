@@ -130,7 +130,7 @@ body {
       color: $hover-color;
     }
     & > input {
-      //display: none;
+      display: none;
 
       &:checked {
         & + svg + div {
@@ -156,8 +156,9 @@ body {
     top: $mobile-height;
     left: 0;
     bottom: 0;
+    transition: transform 0.2s;
     transform: translateX(-100%);
-    background-color: black;
+    background-color: darkgray;
   }
 }
 

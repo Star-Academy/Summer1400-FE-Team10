@@ -110,6 +110,9 @@ body {
 .main-header__hamburger-container:hover .main-header__hamburger-container__hamburger {
   color: #00c3ff;
 }
+.main-header__hamburger-container > input {
+  display: none;
+}
 .main-header__hamburger-container > input:checked + svg + div > .ham-menu-container__ham-menu {
   transform: translateX(0);
 }
@@ -126,8 +129,9 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
+  transition: transform 0.2s;
   transform: translateX(-100%);
-  background-color: black;
+  background-color: darkgray;
 }
 
 @media (min-width: 0px) {
