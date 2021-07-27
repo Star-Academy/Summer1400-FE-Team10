@@ -1,0 +1,96 @@
+body{   
+    background-color: rgb(27, 72, 99);
+    font-size: 62.5%;
+    direction: rtl;
+    color: white;
+    header{
+        font-size: 1rem;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        background-color:rgba(12, 41, 65, 0.589);
+        object-fit: cover;
+        nav{
+        >ul{
+            display: flex;
+            flex-direction: row;
+        
+            list-style: none;
+            >li{
+                margin: 0.5vh 0.8vh;
+            >a{
+                justify-content: center;
+                align-items: center;
+                color: black;
+                background-color: white;
+                border-style: solid;
+                border-color: black;
+                width: 8rem;
+                height: 2rem;
+                border-radius: 1rem;
+                display: flex;
+                flex-direction: row;
+                 
+                text-decoration: none;
+            }
+        }
+        }
+    }
+    }
+    >main{
+        >article{
+            >section{
+                font-size: 2em;
+            }
+        }   
+    }
+}
+
+@media (max-width:370px) {
+    body{
+
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    header{
+        margin: 0;
+        padding:0;
+        font-size: 0.5rem;
+        width: 100%;
+        nav{
+            >ul{
+                display: flex;
+                flex-direction: row;
+                flex-basis: 10px;
+                flex-flow: row wrap;
+                >li{
+                margin: 0 5px;
+                >a{
+                    width: 100%;
+                    height: auto;
+                    border-width: 0.02rem;
+                    border-radius: 999rem;
+                    padding: 5px 10px;
+                }
+            }
+            }
+        }   
+    }
+    main{
+        
+        >article{
+            >section{
+                
+        font-size: 1em;
+            >img{
+                
+            margin-right: 1rem;
+                width: 50%;
+                height: auto;
+            }
+        }
+        }
+    }
+}
+}
+    
