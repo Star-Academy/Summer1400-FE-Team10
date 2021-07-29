@@ -36,7 +36,6 @@ body > main > article > aside > img.signup-img {
   max-width: 42rem;
   margin: auto;
   padding: 2rem;
-  font-size: 0.85rem;
 }
 .form-container > header {
   display: flex;
@@ -92,11 +91,6 @@ body > main > article > aside > img.signup-img {
 @media (min-width: 992px) {
   .form-container {
     margin: 0;
-  }
-}
-@media (min-width: 540px) {
-  .form-container {
-    font-size: 1rem;
   }
 }
 

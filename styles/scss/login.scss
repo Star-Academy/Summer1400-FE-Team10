@@ -106,16 +106,9 @@ body {
   margin: auto;
   padding: 2rem;
 
-  font-size: 0.85rem;
   @media #{$tablet} {
     & {
       margin: 0;
-    }
-  }
-
-  @media #{$mobtab} {
-    & {
-      font-size: 1rem;
     }
   }
 }
