@@ -1,13 +1,9 @@
 //@import url('../../res/fonts/shabnam/Shabnam-Medium-FD.ttf');
 
-:root {
-  --mobile: (min-width: 0px);
-  --tablet: (min-width: 992px);
-  --desktop: (min-width: 1200px);
-}
-$mobile: '(min-width: 0px)';
-$tablet: '(min-width: 992px)';
-$desktop: '(min-width: 1200px)';
+@import 'utils.scss';
+@import 'colors.scss';
+
+$primary-lighter-color: lighten(desaturate($primary-color, 10), 20);
 
 * {
   box-sizing: border-box;
@@ -15,7 +11,7 @@ $desktop: '(min-width: 1200px)';
 
 html {
   font-size: 62.5%;
-  font-family: shabnam;
+  font-family: 'Shabnam';
   direction: rtl;
   overflow-x: hidden;
 }
@@ -207,4 +203,98 @@ body {
   color: #4daaa7;
   color: #3f8f8b;
   color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  font-family: inherit;
+  border: solid 0.1rem #dedede;
+  border-radius: 0.3rem;
+  padding: 0.2rem 0.8rem;
+  transition: box-shadow 0.2s;
+  $color: $primary-color;
+  box-shadow: 0 0 0 0 transparentize($color, 0.85);
+  outline: none;
+
+  &::placeholder {
+    color: #ccc;
+  }
+  &:focus {
+    box-shadow: 0 0 0 0.3rem transparentize($color, 0.85);
+    border-color: $primary-lighter-color;
+  }
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  $radius: 0.3rem;
+  border-radius: $radius;
+  border: solid 0.1rem #cecece;
+  background-color: #fafafa;
+  line-height: 100%;
+  position: relative;
+
+  $color: $primary-color;
+  $scolor: $primary-lighter-color;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: block;
+    border-radius: $radius;
+    transition: box-shadow 0.4s;
+    box-shadow: 0 0 0 0.5rem transparent;
+  }
+
+  &:active {
+    &::after {
+      box-shadow: 0 0 0 0 transparentize($color, 0.1);
+      transition: box-shadow 0s;
+    }
+  }
+
+  &:focus {
+    border-color: $scolor !important;
+  }
+
+  padding: 0.8rem 1.4rem;
+  font-size: 1.5rem;
+
+  &.big {
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+  }
+
+  &.primary {
+    $color: $primary-color;
+    background-color: $color;
+    color: white;
+    border-color: $color;
+  }
+}
+
+label {
+  user-select: none;
+}
+.label-checkbox {
+  cursor: pointer;
 }
