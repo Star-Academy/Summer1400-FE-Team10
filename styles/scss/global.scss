@@ -1,7 +1,8 @@
 //@import url('../../res/fonts/shabnam/Shabnam-Medium-FD.ttf');
 
-@import 'utils.scss';
-@import 'colors.scss';
+@import './utils.scss';
+@import './colors.scss';
+@import './fonts.scss';
 
 $primary-lighter-color: lighten(desaturate($primary-color, 10), 20);
 $darkbg: $black;

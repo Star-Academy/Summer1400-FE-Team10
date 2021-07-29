@@ -45,7 +45,7 @@ body > main > article > aside > img.signup-img {
   margin-bottom: 4em;
 }
 .form-container > header h2 {
-  font-size: 2.8em;
+  font-size: 2.8rem;
 }
 @media (min-width: 992px) {
   .form-container form {
@@ -53,10 +53,10 @@ body > main > article > aside > img.signup-img {
   }
 }
 .form-container label {
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 .form-container label.label-big-input {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   display: block;
   margin: 2em 0 0.8em;
 }
@@ -87,7 +87,7 @@ body > main > article > aside > img.signup-img {
 .form-container .form-footer {
   margin-top: 3em;
   text-align: left;
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 @media (min-width: 992px) {
   .form-container {
