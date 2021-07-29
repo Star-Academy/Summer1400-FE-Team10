@@ -1,0 +1,22 @@
+body {
+  background-color: #1b4863;
+  color: white;
+}
+body main section a.cate1 {
+  margin: 1rem;
+  color: white;
+}
+body main section ul.handlerow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-style: solid;
+  border-width: 0.0001rem;
+  list-style: none;
+  margin-left: 10%;
+}
+body main section ul#handlerow2 {
+  list-style: none;
+}
+
+/*# sourceMappingURL=songs.css.map */

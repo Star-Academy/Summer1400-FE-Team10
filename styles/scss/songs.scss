@@ -1,0 +1,32 @@
+body{
+    
+    background-color: rgb(27, 72, 99);
+      color: white;
+
+    main{
+        section{
+            a{
+            &.cate1{
+                margin: 1rem;
+                color:white;
+            }
+        }
+
+    ul{
+        &.handlerow{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            border-style: solid;
+            border-width: 0.0001rem;
+            list-style: none;
+            margin-left: 10%;
+        }
+        &#handlerow2{
+            list-style:none;
+        }
+
+    }
+                                                                    }
+    }
+}
