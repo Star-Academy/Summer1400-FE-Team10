@@ -1,29 +1,45 @@
+@import 'utils.scss';
+@import 'colors.scss';
+
 body {
   & > main > article {
-    margin: 7rem 0 10rem;
     display: flex;
     flex-direction: row;
 
+    margin: 3rem 0 15rem;
+    @media #{$mobtab} {
+      & {
+        margin: 8rem 0 13rem;
+      }
+    }
+
     & > section {
-      flex: 0.5;
+      flex: 1;
     }
 
     & > aside {
-      flex: 0.5;
-      display: grid;
+      flex: 1;
+      display: none;
       align-items: center;
       justify-content: flex-end;
       & > img {
         width: 100%;
         max-width: 65rem;
         margin-bottom: 4rem;
+        &.signup-img {
+          margin-bottom: 6rem;
+        }
+      }
+      @media #{$tablet} {
+        & {
+          display: flex;
+        }
       }
     }
   }
 }
 
 .form-container {
-  padding: 5rem 2rem;
   //background-color: #fcfcfc;
 
   width: 100%;
@@ -33,19 +49,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 4rem;
+    margin-bottom: 4em;
     & h2 {
-      font-size: 2.8rem;
+      font-size: 2.8em;
     }
   }
   & form {
-    padding-right: 1.2rem;
+    @media #{$tablet} {
+      padding-right: 1.2rem;
+    }
+  }
+  & label {
+    font-size: 1.4em;
   }
   & label.label-big-input {
-    font-size: 1.8rem;
+    font-size: 1.8em;
     display: block;
-    margin-top: 2rem;
-    margin-bottom: 0.8rem;
+    margin: 2em 0 0.8em;
 
     & input {
       display: block;
@@ -66,6 +86,36 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem 0;
+    margin-top: 4em;
+  }
+
+  & .signup-submit-container {
+    text-align: left;
+    margin-top: 4em;
+    & > button {
+      width: 100%;
+    }
+  }
+
+  & .form-footer {
+    margin-top: 3em;
+    text-align: left;
+    font-size: 1.3em;
+  }
+
+  margin: auto;
+  padding: 2rem;
+
+  font-size: 0.85rem;
+  @media #{$tablet} {
+    & {
+      margin: 0;
+    }
+  }
+
+  @media #{$mobtab} {
+    & {
+      font-size: 1rem;
+    }
   }
 }

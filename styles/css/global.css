@@ -251,4 +251,11 @@ label {
   cursor: pointer;
 }
 
+.main-footer {
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 1.4rem;
+  padding: 1.2rem 0;
+}
+
 /*# sourceMappingURL=global.css.map */

@@ -4,6 +4,7 @@
 @import 'colors.scss';
 
 $primary-lighter-color: lighten(desaturate($primary-color, 10), 20);
+$darkbg: $black;
 
 * {
   box-sizing: border-box;
@@ -29,7 +30,7 @@ body {
 .main-header {
   $height: 8rem;
   height: $height;
-  background-color: #1a1a1a;
+  background-color: $darkbg;
   position: relative;
   $nav-spacing: 1.8rem;
   $nav-top-spacing: 2.9rem;
@@ -297,4 +298,11 @@ label {
 }
 .label-checkbox {
   cursor: pointer;
+}
+
+.main-footer {
+  background-color: $darkbg;
+  color: white;
+  font-size: 1.4rem;
+  padding: 1.2rem 0;
 }
