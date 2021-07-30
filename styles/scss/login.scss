@@ -9,9 +9,7 @@ body {
 
     margin: 3rem 0 15rem;
     @media #{$mobtab} {
-      & {
-        margin: 8rem 0 13rem;
-      }
+      margin: 8rem 0 13rem;
     }
 
     & > section {
@@ -32,9 +30,7 @@ body {
         }
       }
       @media #{$tablet} {
-        & {
-          display: flex;
-        }
+        display: flex;
       }
     }
   }
@@ -111,5 +107,12 @@ body {
     & {
       margin: 0;
     }
+  }
+}
+
+.main-header__inner {
+  justify-content: center;
+  @media #{$tablet} {
+    justify-content: space-between;
   }
 }

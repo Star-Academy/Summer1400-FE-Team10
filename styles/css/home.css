@@ -32,12 +32,27 @@
 .main-banner__body .flex-spacer:first-of-type {
   flex: 0.6;
 }
+.main-banner__body__title-box {
+  animation: titlebox 0.8s ease-out;
+}
+@keyframes titlebox {
+  from {
+    transform: translateY(-10rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .main-banner__body__title {
   font-weight: 100;
   font-size: 2rem;
+  text-align: center;
 }
 .main-banner__body__slogan {
   font-weight: 400;
+  text-align: center;
 }
 .main-banner__body__slogan span {
   color: #1db954;
@@ -57,9 +72,20 @@
   font-weight: 100;
   line-height: 2.4rem;
   color: #fafafa !important;
+  animation: learnmore 0.6s ease-out;
 }
 .main-banner__body__learn-more:hover {
   font-weight: 400;
+}
+@keyframes learnmore {
+  from {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 @media (min-width: 0px) {
   .main-banner__body {
@@ -76,6 +102,7 @@
     padding-right: 5rem;
   }
   .main-banner__body__title {
+    text-align: right;
     font-size: 2.4rem;
   }
   .main-banner__body__slogan {

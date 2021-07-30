@@ -1,78 +1,17 @@
-body {
-  background-color: #1b4863;
-  font-size: 62.5%;
-  direction: rtl;
-  color: white;
-}
-body header {
-  font-size: 1rem;
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  background-color: rgba(12, 41, 65, 0.589);
-  object-fit: cover;
-}
-body header nav > ul {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-}
-body header nav > ul > li {
-  margin: 0.5vh 0.8vh;
-}
-body header nav > ul > li > a {
-  justify-content: center;
-  align-items: center;
-  color: black;
-  background-color: white;
-  border-style: solid;
-  border-color: black;
-  width: 8rem;
-  height: 2rem;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: row;
-  text-decoration: none;
-}
 body > main > article > section {
-  font-size: 2em;
+  font-size: 1.6rem;
+}
+body > main > article > section > img {
+  width: 100%;
 }
 
 @media (max-width: 370px) {
-  body {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
+  main > article > section {
+    font-size: 1.4rem;
   }
-  body header {
-    margin: 0;
-    padding: 0;
-    font-size: 0.5rem;
-    width: 100%;
-  }
-  body header nav > ul {
-    display: flex;
-    flex-direction: row;
-    flex-basis: 10px;
-    flex-flow: row wrap;
-  }
-  body header nav > ul > li {
-    margin: 0 5px;
-  }
-  body header nav > ul > li > a {
-    width: 100%;
+  main > article > section > img {
     height: auto;
-    border-width: 0.02rem;
-    border-radius: 999rem;
-    padding: 5px 10px;
-  }
-  body main > article > section {
-    font-size: 1em;
-  }
-  body main > article > section > img {
-    margin-right: 1rem;
-    width: 50%;
-    height: auto;
+    width: 100%;
   }
 }
 
