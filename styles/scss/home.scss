@@ -1,0 +1,115 @@
+@import './utils/utils.scss';
+@import './utils/colors.scss';
+
+.main-banner {
+  height: 100vh;
+  $cfrom: darken(transparentize($primary-color, 0.4), 30);
+  $cto: darken(transparentize($secondary-color, 0.7), 50);
+  $img1: url('../../res/images/home/tile-2.png');
+  $img2: url('../../res/images/home/banner-4.jpg');
+  background-image: linear-gradient(-115deg, $cfrom 60%, $cto 100%), $img1, $img2;
+  background-size: cover, 0.4rem, cover;
+  background-position-y: center;
+  background-position-x: 30%;
+  background-repeat: no-repeat, repeat, repeat;
+  background-blend-mode: normal, normal, normal;
+
+  transition: background 0.3s;
+
+  margin-top: -5rem;
+
+  @media #{$tablet} {
+    margin-top: -8rem;
+    $cfrom: transparentize($primary-color, 0.4);
+    $cto: transparentize($secondary-color, 0.7);
+    background-image: linear-gradient(-115deg, $g1 60%, $cfrom 60%, $cto 100%), $img1, $img2;
+  }
+
+  min-height: 50rem;
+  color: $g9;
+
+  position: relative;
+
+  & > .page-section-inner {
+    height: 100%;
+  }
+
+  &__body {
+    position: relative;
+    top: 25vh;
+
+    &__title {
+      font-weight: 100;
+      font-size: 2rem;
+    }
+
+    &__slogan {
+      font-weight: 400;
+      & span {
+        color: $primary-color;
+      }
+    }
+
+    &__info {
+      margin: auto;
+      margin-top: 4rem;
+      width: 20rem;
+      font-size: 1.3rem;
+      font-weight: 100;
+      line-height: 2.4rem;
+      text-align: center;
+    }
+
+    &__learn-more {
+      margin-top: 21vh;
+      font-size: 1.4rem;
+      font-weight: 100;
+      line-height: 2.4rem;
+      color: $g9 !important;
+      &:hover {
+        font-weight: 400;
+      }
+    }
+
+    @media #{$mobile} {
+      text-align: center;
+      &__slogan {
+        text-align: center;
+        font-size: 2.6rem;
+      }
+    }
+
+    @media #{$mobtab} {
+      top: 30vh;
+      text-align: right;
+      padding-right: 5rem;
+      &__title {
+        font-size: 2.4rem;
+      }
+      &__slogan {
+        text-align: right;
+        font-size: 3.6rem;
+      }
+      &__info {
+        width: 32rem;
+        font-size: 1.4rem;
+        text-align: right;
+        margin-right: 0;
+      }
+
+      &__learn-more {
+        margin-top: 10rem;
+      }
+    }
+
+    @media #{$tablet} {
+      &__slogan {
+        font-size: 4.6rem;
+      }
+    }
+  }
+}
+
+.main-header {
+  background: none;
+}

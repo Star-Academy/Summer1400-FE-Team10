@@ -340,6 +340,17 @@ button.primary {
   color: white;
   border-color: #1db954;
 }
+button.border {
+  background-color: transparent;
+  color: black;
+  border-color: #1db954;
+  transition: all 0.2s;
+}
+button.border:hover {
+  background-color: #1db954;
+  color: #fafafa;
+  border-color: #1db954;
+}
 button.wide {
   width: 16rem;
 }

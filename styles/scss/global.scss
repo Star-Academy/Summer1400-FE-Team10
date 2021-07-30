@@ -382,6 +382,19 @@ button {
     border-color: $color;
   }
 
+  &.border {
+    background-color: transparent;
+    color: black;
+    border-color: $color;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $color;
+      color: $g9;
+      border-color: $color;
+    }
+  }
+
   &.wide {
     width: 16rem;
   }

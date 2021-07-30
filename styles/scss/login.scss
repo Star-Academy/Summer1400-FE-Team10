@@ -2,6 +2,7 @@
 @import './utils/colors.scss';
 
 body {
+  background-color: white;
   & > main > article {
     display: flex;
     flex-direction: row;
