@@ -6,7 +6,7 @@
   $cfrom: darken(transparentize($primary-color, 0.4), 30);
   $cto: darken(transparentize($secondary-color, 0.7), 50);
   $img1: url('../../res/images/home/tile-2.png');
-  $img2: url('../../res/images/home/banner-4.jpg');
+  $img2: url('../../res/images/home/banner-7.jpg');
   background-image: linear-gradient(-115deg, $cfrom 60%, $cto 100%), $img1, $img2;
   background-size: cover, 0.4rem, cover;
   background-position-y: center;

@@ -1,6 +1,6 @@
 .main-banner {
   height: 100vh;
-  background-image: linear-gradient(-115deg, rgba(8, 53, 24, 0.6) 60%, rgba(0, 0, 0, 0.3) 100%), url("../../res/images/home/tile-2.png"), url("../../res/images/home/banner-4.jpg");
+  background-image: linear-gradient(-115deg, rgba(8, 53, 24, 0.6) 60%, rgba(0, 0, 0, 0.3) 100%), url("../../res/images/home/tile-2.png"), url("../../res/images/home/banner-7.jpg");
   background-size: cover, 0.4rem, cover;
   background-position-y: center;
   background-position-x: 30%;
@@ -15,7 +15,7 @@
 @media (min-width: 992px) {
   .main-banner {
     margin-top: -8rem;
-    background-image: linear-gradient(-115deg, #191414 60%, rgba(29, 185, 84, 0.6) 60%, rgba(6, 185, 240, 0.3) 100%), url("../../res/images/home/tile-2.png"), url("../../res/images/home/banner-4.jpg");
+    background-image: linear-gradient(-115deg, #191414 60%, rgba(29, 185, 84, 0.6) 60%, rgba(6, 185, 240, 0.3) 100%), url("../../res/images/home/tile-2.png"), url("../../res/images/home/banner-7.jpg");
   }
 }
 .main-banner > .page-section-inner {
