@@ -22,8 +22,15 @@
   height: 100%;
 }
 .main-banner__body {
-  position: relative;
-  top: 25vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main-banner__body .flex-spacer {
+  flex: 0.4;
+}
+.main-banner__body .flex-spacer:first-of-type {
+  flex: 0.6;
 }
 .main-banner__body__title {
   font-weight: 100;
@@ -45,7 +52,7 @@
   text-align: center;
 }
 .main-banner__body__learn-more {
-  margin-top: 21vh;
+  margin-bottom: 4rem;
   font-size: 1.4rem;
   font-weight: 100;
   line-height: 2.4rem;
@@ -56,7 +63,7 @@
 }
 @media (min-width: 0px) {
   .main-banner__body {
-    text-align: center;
+    align-items: center;
   }
   .main-banner__body__slogan {
     text-align: center;
@@ -65,8 +72,7 @@
 }
 @media (min-width: 540px) {
   .main-banner__body {
-    top: 30vh;
-    text-align: right;
+    align-items: flex-start;
     padding-right: 5rem;
   }
   .main-banner__body__title {
@@ -83,7 +89,7 @@
     margin-right: 0;
   }
   .main-banner__body__learn-more {
-    margin-top: 10rem;
+    margin-bottom: 8rem;
   }
 }
 @media (min-width: 992px) {
