@@ -152,6 +152,7 @@ dist
 .pnp.*
 
 ### Sass ###
+*.css
 *.css.map
 *.sass.map
 *.scss.map

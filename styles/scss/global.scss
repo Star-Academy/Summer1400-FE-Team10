@@ -1,11 +1,11 @@
 //@import url('../../res/fonts/shabnam/Shabnam-Medium-FD.ttf');
 
-@import './utils.scss';
-@import './colors.scss';
-@import './fonts.scss';
+@import './utils/utils.scss';
+@import './utils/colors.scss';
+@import './utils/fonts.scss';
 
 $primary-lighter-color: lighten(desaturate($primary-color, 10), 20);
-$darkbg: $black;
+$darkbg: $g1;
 
 * {
   box-sizing: border-box;
@@ -18,14 +18,11 @@ html {
   overflow-x: hidden;
 }
 
-html > * {
-  font-size: 160%;
-}
-
 body {
   margin: 0;
   padding: 0;
-  background-color: white;
+  font-size: 1.4rem;
+  background-color: $g9;
 }
 
 .main-header {
@@ -35,11 +32,15 @@ body {
   position: relative;
   $nav-spacing: 1.8rem;
   $nav-top-spacing: 2.9rem;
-  $base-color: #e6e6e6;
-  $hover-color: #00c3ff;
+  $base-color: $g8;
+  $hover-color: $primary-color;
   $trans: 0.12s ease-out;
   user-select: none;
   z-index: 10;
+
+  & a {
+    outline: none;
+  }
 
   &__inner {
     overflow: hidden;
@@ -192,6 +193,36 @@ body {
 @media #{$desktop} {
   .main-header {
     &__inner {
+      max-width: 117rem;
+    }
+  }
+}
+
+.page-section {
+  width: 100%;
+}
+
+.page-section-inner {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3rem;
+  padding-right: 3rem;
+
+  @media #{$mobile} {
+    & {
+      max-width: unset;
+    }
+  }
+
+  @media #{$tablet} {
+    & {
+      max-width: 96rem;
+    }
+  }
+
+  @media #{$desktop} {
+    & {
       max-width: 117rem;
     }
   }

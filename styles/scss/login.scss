@@ -1,5 +1,5 @@
-@import 'utils.scss';
-@import 'colors.scss';
+@import './utils/utils.scss';
+@import './utils/colors.scss';
 
 body {
   & > main > article {

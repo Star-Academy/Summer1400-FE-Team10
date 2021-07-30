@@ -1,120 +1,117 @@
-body{
-    background-color: rgb(27, 72, 99);
-    font-size: 62.5%;
-    direction: rtl;
-    color: white;
-    header{
-        font-size: 1rem;
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-        background-color:rgba(12, 41, 65, 0.589);
-        object-fit: cover;
-        nav{
-        >ul{
-            display: flex;
-            flex-direction: row;
-        
-            list-style: none;
-            >li{
-                margin: 0.5vh 0.8vh;
-            >a{
-                justify-content: center;
-                align-items: center;
-                color: black;
-                background-color: white;
-                border-style: solid;
-                border-color: black;
-                width: 8rem;
-                height: 2rem;
-                border-radius: 1rem;
-                display: flex;
-                flex-direction: row;
-                 
-                text-decoration: none;
-            }
-        }
-        }
+@import './utils/colors.scss';
+@import './utils/utils.scss';
+/*
+body {
+  background-color: rgb(255, 255, 255);
+  font-size: 62.5%;
+  direction: rtl;
+
+  main {
+    #main-section1 {
+      > img {
+        width: 50vh;
+        height: auto;
+      }
+      font-size: 2em;
     }
+    section {
+      font-size: 2em;
+      #downloadbtn {
+        color: white;
+        border-style: solid;
+        text-decoration: none;
+        padding: 0.5rem 2rem;
+        border-width: 0.1rem;
+        border-radius: 5rem;
+        background-color: rgb(26, 153, 94);
+      }
     }
-    main{
-        display: flex;
-        flex-direction: column;
-        #main-section1{
-            
-            margin-right: 1rem;
-            >img{
-                width: 50vh;
-                height: auto;
-            }
-            font-size: 2em;
-    }
-    section{
-        font-size: 2em;
-        #downloadbtn{
-            color: white;
-            border-style: solid;
-            text-decoration: none;
-            padding: 0.5rem 2rem;
-            border-width: 0.1rem;
-            border-radius: 5rem;
-            background-color: rgb(26, 153, 94);
-        }
-        
-    }
-    }
+  }
 }
-@media (max-width:370px) {
-    body{
-        margin: 0px;
-        padding: 0px;
-        width: 100vh;
-    header{
-        margin: 0;
-        padding:0;
-        font-size: 0.5rem;
-        width: 100%;
-        nav{
-            >ul{
-                display: flex;
-                flex-direction: row;
-                flex-basis: 10px;
-                flex-flow: row wrap;
-                >li{
-                margin: 0 5px;
-                >a{
-                    width: 100%;
-                    height: auto;
-                    border-width: 0.02rem;
-                    border-radius: 999rem;
-                    padding: 5px 10px;
-                }
-            }
-            }
-        }   
-    }
-    main{
-        display: flex;
-        flex-direction: column;
-        #main-section1{
-            
-            margin-right: 1rem;
-            >img{
-                width: 50%;
-                height: auto;
-            }
-            font-size: 1em;
-    }
-    section{
+@media (max-width: 370px) {
+  body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vh;
+    main {
+      display: flex;
+      flex-direction: column;
+      #main-section1 {
+        margin-right: 1rem;
+        > img {
+          width: 50%;
+          height: auto;
+        }
         font-size: 1em;
-        #downloadbtn{
-            padding: 0.1rem 0.5rem;
-            border-width: 0.01rem;
-            border-radius: 5rem;
-            background-color: rgb(26, 153, 94);
+      }
+      section {
+        font-size: 1em;
+        #downloadbtn {
+          padding: 0.1rem 0.5rem;
+          border-width: 0.01rem;
+          border-radius: 5rem;
+          background-color: rgb(26, 153, 94);
         }
-        
+      }
     }
+  }
+}*/
+
+.song-banner {
+  background: $g1;
+  background-image: url('../../data/songs/1/image.jpg');
+  background-position: center;
+  background-size: cover;
+  $cfrom: transparentize($g1, 0.02);
+  $cto: transparentize($g1, 0.12);
+  background-image: linear-gradient(to bottom, $cfrom 50%, $cto), url('../../data/songs/1/image.jpg');
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8em;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: $g8;
+
+    & > img {
+      $size: 25rem;
+      width: $size;
+      max-height: $size;
+      border-radius: 1.25rem;
     }
-}
+
+    & > div {
+      flex: 1;
+      padding: 3rem 0 0;
+      & > h2 {
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+  @media #{$mobtab} {
+    &__inner {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: inherit;
+      font-size: 1em;
+      padding-bottom: 4rem;
+
+      & > img {
+        $size: 20rem;
+        width: $size;
+        max-height: $size;
+      }
+
+      & > div {
+        padding: 3rem 3rem 0;
+        & > h2 {
+          margin-bottom: 5rem;
+        }
+      }
+    }
+  }
 }
