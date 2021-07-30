@@ -200,6 +200,33 @@ body {
 
 .page-section {
   width: 100%;
+  &--main-row {
+    padding: 3rem 0;
+  }
+
+  &__header {
+    padding: 3rem 0 2rem;
+    text-align: center;
+    &__info {
+      color: $primary-color;
+      font-weight: 500;
+    }
+    &__title {
+      font-size: 2.8rem;
+      margin-top: 1.2rem;
+    }
+  }
+
+  &__body {
+    & p {
+      text-align: justify;
+      line-height: 2.6rem;
+    }
+  }
+  &__footer {
+    padding: 3rem 0 0.4rem;
+    text-align: center;
+  }
 }
 
 .page-section-inner {
@@ -322,6 +349,13 @@ button {
     background-color: $color;
     color: white;
     border-color: $color;
+  }
+
+  &.wide {
+    width: 16rem;
+  }
+  &.wider {
+    width: 24rem;
   }
 }
 

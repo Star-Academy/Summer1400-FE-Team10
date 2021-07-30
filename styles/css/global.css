@@ -183,6 +183,29 @@ body {
 .page-section {
   width: 100%;
 }
+.page-section--main-row {
+  padding: 3rem 0;
+}
+.page-section__header {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+.page-section__header__info {
+  color: #00ca54;
+  font-weight: 500;
+}
+.page-section__header__title {
+  font-size: 2.8rem;
+  margin-top: 1.2rem;
+}
+.page-section__body p {
+  text-align: justify;
+  line-height: 2.6rem;
+}
+.page-section__footer {
+  padding: 3rem 0 0.4rem;
+  text-align: center;
+}
 
 .page-section-inner {
   width: 100%;
@@ -292,6 +315,12 @@ button.primary {
   background-color: #00ca54;
   color: white;
   border-color: #00ca54;
+}
+button.wide {
+  width: 16rem;
+}
+button.wider {
+  width: 24rem;
 }
 
 label {
