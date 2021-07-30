@@ -1,9 +1,9 @@
 .song-banner {
-  background: #1a1a1a;
+  background: #191414;
   background-image: url("../../data/songs/1/image.jpg");
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.98) 50%, rgba(26, 26, 26, 0.88)), url("../../data/songs/1/image.jpg");
+  background-image: linear-gradient(to bottom, rgba(25, 20, 20, 0.98) 50%, rgba(25, 20, 20, 0.88)), url("../../data/songs/1/image.jpg");
 }
 .song-banner__inner {
   display: flex;

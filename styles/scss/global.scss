@@ -115,15 +115,16 @@ body {
     background: none;
     border: none;
     padding: 0 $nav-spacing;
-    line-height: 6.6rem;
     cursor: pointer;
-    display: block;
+    display: flex;
+    align-items: center;
 
     &__hamburger {
       color: $base-color;
       transition: color $trans;
-      width: 2.6rem;
-      height: 2.6rem;
+      $size: 2.1rem;
+      width: $size;
+      height: $size;
     }
     &:hover &__hamburger {
       color: $hover-color;
@@ -145,19 +146,49 @@ body {
 .ham-menu-container {
   width: 0;
   height: 0;
+  $base-color: $g8;
+  $hover-color: $primary-color;
+  $trans: 0.12s ease-out;
 
   &__ham-menu {
     $mobile-height: 0;
     position: fixed;
     z-index: 5;
-    width: 40rem;
+    width: 28rem;
+    max-width: 100%;
     height: 100vh;
     top: $mobile-height;
     left: 0;
     bottom: 0;
     transition: transform 0.2s;
     transform: translateX(-100%);
-    background-color: darkgray;
+    background-color: $g1;
+
+    & > ul {
+      padding: 0;
+      margin: 0;
+
+      & li {
+        list-style-type: none;
+        width: 100%;
+        & > a {
+          display: block;
+          width: 100%;
+          height: 3rem;
+          padding: 2rem 3.5rem;
+          font-size: 1.4rem;
+          font-weight: 500;
+
+          text-decoration: none;
+          color: $base-color;
+          transition: all $trans;
+          transition-property: color, padding;
+          &:hover {
+            color: $hover-color;
+          }
+        }
+      }
+    }
   }
 }
 
