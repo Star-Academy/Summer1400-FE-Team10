@@ -229,6 +229,14 @@ body {
   }
 }
 
+@media #{$wide-desktop} {
+  .main-header {
+    &__inner {
+      max-width: 157rem;
+    }
+  }
+}
+
 .page-section {
   width: 100%;
   &--main-row {
@@ -268,21 +276,18 @@ body {
   padding-right: 2rem;
 
   @media #{$mobile} {
-    & {
-      max-width: unset;
-    }
+    max-width: unset;
   }
 
   @media #{$tablet} {
-    & {
-      max-width: 96rem;
-    }
+    max-width: 96rem;
   }
 
   @media #{$desktop} {
-    & {
-      max-width: 117rem;
-    }
+    max-width: 117rem;
+  }
+  @media #{$wide-desktop} {
+    max-width: 157rem;
   }
 }
 

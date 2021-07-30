@@ -204,6 +204,11 @@ body {
     max-width: 117rem;
   }
 }
+@media (min-width: 1600px) {
+  .main-header__inner {
+    max-width: 157rem;
+  }
+}
 .page-section {
   width: 100%;
 }
@@ -251,6 +256,11 @@ body {
 @media (min-width: 1200px) {
   .page-section-inner {
     max-width: 117rem;
+  }
+}
+@media (min-width: 1600px) {
+  .page-section-inner {
+    max-width: 157rem;
   }
 }
 
