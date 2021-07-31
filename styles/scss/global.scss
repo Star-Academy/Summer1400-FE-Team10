@@ -239,13 +239,22 @@ body {
 
 .page-section {
   width: 100%;
+  background-color: $g9;
+  &--alternate {
+    background-color: $g8;
+  }
   &--main-row {
-    padding: 3rem 0;
+    padding: 8rem 0;
   }
 
   &__header {
-    padding: 3rem 0 2rem;
+    margin-bottom: 3rem;
     text-align: center;
+
+    &--margin {
+      margin-bottom: 6rem;
+    }
+
     &__info {
       color: $primary-color;
       font-weight: 500;
@@ -263,8 +272,14 @@ body {
     }
   }
   &__footer {
-    padding: 3rem 0 0.4rem;
+    margin-top: 4rem;
     text-align: center;
+    &--left {
+      text-align: left;
+    }
+    &--right {
+      text-align: right;
+    }
   }
 }
 
@@ -289,6 +304,40 @@ body {
   @media #{$wide-desktop} {
     max-width: 157rem;
   }
+}
+
+.row-parts {
+  display: flex;
+  flex-direction: column;
+  @media #{$tablet} {
+    flex-direction: row;
+  }
+  gap: 4rem;
+
+  &--reverse {
+    @media #{$tablet} {
+      flex-direction: row-reverse;
+    }
+  }
+
+  & > div {
+    flex: 1;
+  }
+
+  & > div.row-part--big {
+    flex: 1.5;
+  }
+}
+.row-part {
+  &--align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.general-img {
+  border-radius: 0.8rem;
 }
 
 .colorpalletes {
@@ -420,8 +469,4 @@ label {
   color: $g8;
   font-size: 1.4rem;
   padding: 1.2rem 0;
-}
-
-main {
-  padding: 2rem 0;
 }

@@ -65,7 +65,7 @@ body {
   display: grid;
   align-items: center;
   padding: 0 1.8rem;
-  color: #e9e9e9;
+  color: #f0f0f0;
   transition: color 0.12s ease-out;
 }
 .main-header__logo-container:hover {
@@ -98,7 +98,7 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   text-decoration: none;
-  color: #e9e9e9;
+  color: #f0f0f0;
   transition: all 0.12s ease-out;
   transition-property: color, padding;
 }
@@ -109,7 +109,7 @@ body {
   width: 0.1rem;
   height: 1.8rem !important;
   margin: 0 1.8rem;
-  background-color: #e9e9e9;
+  background-color: #f0f0f0;
 }
 .main-header__hamburger-container {
   background: none;
@@ -120,7 +120,7 @@ body {
   align-items: center;
 }
 .main-header__hamburger-container__hamburger {
-  color: #e9e9e9;
+  color: #f0f0f0;
   transition: color 0.12s ease-out;
   width: 2.1rem;
   height: 2.1rem;
@@ -168,7 +168,7 @@ body {
   font-size: 1.4rem;
   font-weight: 500;
   text-decoration: none;
-  color: #e9e9e9;
+  color: #f0f0f0;
   transition: all 0.12s ease-out;
   transition-property: color, padding;
 }
@@ -211,13 +211,20 @@ body {
 }
 .page-section {
   width: 100%;
+  background-color: #fafafa;
+}
+.page-section--alternate {
+  background-color: #f0f0f0;
 }
 .page-section--main-row {
-  padding: 3rem 0;
+  padding: 8rem 0;
 }
 .page-section__header {
-  padding: 3rem 0 2rem;
+  margin-bottom: 3rem;
   text-align: center;
+}
+.page-section__header--margin {
+  margin-bottom: 6rem;
 }
 .page-section__header__info {
   color: #1db954;
@@ -232,8 +239,14 @@ body {
   line-height: 2.6rem;
 }
 .page-section__footer {
-  padding: 3rem 0 0.4rem;
+  margin-top: 4rem;
   text-align: center;
+}
+.page-section__footer--left {
+  text-align: left;
+}
+.page-section__footer--right {
+  text-align: right;
 }
 
 .page-section-inner {
@@ -262,6 +275,38 @@ body {
   .page-section-inner {
     max-width: 157rem;
   }
+}
+
+.row-parts {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+@media (min-width: 992px) {
+  .row-parts {
+    flex-direction: row;
+  }
+}
+@media (min-width: 992px) {
+  .row-parts--reverse {
+    flex-direction: row-reverse;
+  }
+}
+.row-parts > div {
+  flex: 1;
+}
+.row-parts > div.row-part--big {
+  flex: 1.5;
+}
+
+.row-part--align {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.general-img {
+  border-radius: 0.8rem;
 }
 
 .colorpalletes {
@@ -378,13 +423,9 @@ label {
 
 .main-footer {
   background-color: #191414;
-  color: #e9e9e9;
+  color: #f0f0f0;
   font-size: 1.4rem;
   padding: 1.2rem 0;
-}
-
-main {
-  padding: 2rem 0;
 }
 
 /*# sourceMappingURL=global.css.map */

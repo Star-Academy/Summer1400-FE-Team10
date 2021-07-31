@@ -15,7 +15,7 @@
 @media (min-width: 992px) {
   .main-banner {
     margin-top: -8rem;
-    background-image: linear-gradient(-115deg, #191414 60%, rgba(29, 185, 84, 0.6) 60%, rgba(6, 185, 240, 0.3) 100%), url("../../res/images/home/tile-2.png"), url("../../res/images/home/banner-7.jpg");
+    background-image: linear-gradient(-115deg, rgba(25, 20, 20, 0.85) 60%, rgba(29, 185, 84, 0.6) 60%, rgba(6, 185, 240, 0.3) 100%), url("../../res/images/home/tile-2.png"), url("../../res/images/home/banner-7.jpg");
   }
 }
 .main-banner > .page-section-inner {
@@ -69,13 +69,10 @@
 .main-banner__body__learn-more {
   margin-bottom: 4rem;
   font-size: 1.4rem;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 2.4rem;
   color: #fafafa !important;
   animation: learnmore 0.6s ease-out;
-}
-.main-banner__body__learn-more:hover {
-  font-weight: 400;
 }
 @keyframes learnmore {
   from {
@@ -127,6 +124,20 @@
 
 .main-header {
   background: none;
+}
+
+.section-about-us__important-text {
+  font-size: 1.6rem;
+  width: 100%;
+  margin: auto;
+  line-height: 4rem !important;
+  text-align: center !important;
+}
+@media (min-width: 540px) {
+  .section-about-us__important-text {
+    width: 70%;
+    font-size: 1.8rem;
+  }
 }
 
 /*# sourceMappingURL=home.css.map */
