@@ -1,10 +1,5 @@
-body {
-  background-color: #1b4863;
-  color: white;
-}
 body main section a.cate1 {
   margin: 1rem;
-  color: white;
 }
 body main section ul.handlerow {
   display: grid;

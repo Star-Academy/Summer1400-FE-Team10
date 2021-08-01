@@ -364,8 +364,9 @@ button {
   background-color: #fafafa;
   line-height: 100%;
   position: relative;
-  padding: 0.8rem 1.4rem;
+  padding: 1.4rem 4.2rem;
   font-size: 1.5rem;
+  font-weight: 500;
 }
 button::after {
   content: "";
@@ -376,19 +377,23 @@ button::after {
   bottom: 0;
   display: block;
   border-radius: 0.3rem;
-  transition: box-shadow 0.4s;
-  box-shadow: 0 0 0 0.5rem transparent;
+  transition: box-shadow 0.5s ease-out;
+  box-shadow: 0 0 0 0.8rem transparent;
 }
 button:active::after {
-  box-shadow: 0 0 0 0 rgba(29, 185, 84, 0.9);
+  box-shadow: 0 0 0 0 rgba(29, 185, 84, 0.8);
   transition: box-shadow 0s;
 }
 button:focus {
   border-color: #61db8c !important;
 }
-button.big {
-  padding: 1rem 2rem;
+button.small {
+  padding: 0.8rem 1.4rem;
   font-size: 1.6rem;
+}
+button.big {
+  padding: 1.6rem 6rem;
+  font-size: 1.5rem;
 }
 button.primary {
   background-color: #1db954;
@@ -397,8 +402,8 @@ button.primary {
 }
 button.border {
   background-color: transparent;
-  color: black;
-  border-color: #1db954;
+  color: #5a5a5a;
+  border-color: #c9c9c9;
   transition: all 0.2s;
 }
 button.border:hover {
@@ -411,6 +416,14 @@ button.wide {
 }
 button.wider {
   width: 24rem;
+}
+button.widest {
+  width: 24rem;
+}
+@media (min-width: 992px) {
+  button.widest {
+    width: 36rem;
+  }
 }
 
 label {

@@ -68,10 +68,6 @@
 }
 .main-banner__body__learn-more {
   margin-bottom: 4rem;
-  font-size: 1.4rem;
-  font-weight: 300;
-  line-height: 2.4rem;
-  color: #fafafa !important;
   animation: learnmore 0.6s ease-out;
 }
 @keyframes learnmore {

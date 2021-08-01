@@ -406,13 +406,13 @@ button {
     bottom: 0;
     display: block;
     border-radius: $radius;
-    transition: box-shadow 0.4s;
-    box-shadow: 0 0 0 0.5rem transparent;
+    transition: box-shadow 0.5s ease-out;
+    box-shadow: 0 0 0 0.8rem transparent;
   }
 
   &:active {
     &::after {
-      box-shadow: 0 0 0 0 transparentize($color, 0.1);
+      box-shadow: 0 0 0 0 transparentize($color, 0.2);
       transition: box-shadow 0s;
     }
   }
@@ -421,12 +421,18 @@ button {
     border-color: $scolor !important;
   }
 
-  padding: 0.8rem 1.4rem;
+  padding: 1.4rem 4.2rem;
   font-size: 1.5rem;
+  font-weight: 500;
+
+  &.small {
+    padding: 0.8rem 1.4rem;
+    font-size: 1.6rem;
+  }
 
   &.big {
-    padding: 1rem 2rem;
-    font-size: 1.6rem;
+    padding: 1.6rem 6rem;
+    font-size: 1.5rem;
   }
 
   &.primary {
@@ -438,8 +444,8 @@ button {
 
   &.border {
     background-color: transparent;
-    color: black;
-    border-color: $color;
+    color: $g5;
+    border-color: $g7;
     transition: all 0.2s;
 
     &:hover {
@@ -454,6 +460,12 @@ button {
   }
   &.wider {
     width: 24rem;
+  }
+  &.widest {
+    width: 24rem;
+    @media #{$tablet} {
+      width: 36rem;
+    }
   }
 }
 
