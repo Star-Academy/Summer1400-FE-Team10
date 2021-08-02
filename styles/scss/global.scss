@@ -442,6 +442,35 @@ button {
     border-color: $color;
   }
 
+  &.tag {
+    background-color: $c-inputbg;
+    color: $c-inputfg;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    margin: 0 0.2rem;
+    font-size: 1.2rem;
+    transition: background-color 0.2s;
+    $tag-radius: 0.6rem;
+    border-radius: $tag-radius;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $c-iconbg;
+    }
+
+    &::after {
+      border-radius: $tag-radius;
+      transition: box-shadow 0.35s ease;
+      box-shadow: 0 0 0 0.4rem transparent;
+    }
+    &:active {
+      &::after {
+        box-shadow: 0 0 0 0 transparentize($c-inputfg, 0.4);
+        transition: box-shadow 0s;
+      }
+    }
+  }
+
   &.border {
     background-color: transparent;
     color: $g5;
@@ -456,15 +485,15 @@ button {
   }
 
   &.wide {
-    width: 16rem;
+    min-width: 16rem;
   }
   &.wider {
-    width: 24rem;
+    min-width: 24rem;
   }
   &.widest {
-    width: 24rem;
+    min-width: 24rem;
     @media #{$tablet} {
-      width: 36rem;
+      min-width: 36rem;
     }
   }
 }
@@ -481,4 +510,10 @@ label {
   color: $g8;
   font-size: 1.4rem;
   padding: 1.2rem 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }

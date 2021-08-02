@@ -37,7 +37,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.4rem;
-  background-color: #fafafa;
+  background-color: #fbfafa;
 }
 
 .main-header {
@@ -65,7 +65,7 @@ body {
   display: grid;
   align-items: center;
   padding: 0 1.8rem;
-  color: #f0f0f0;
+  color: #f7f7fa;
   transition: color 0.12s ease-out;
 }
 .main-header__logo-container:hover {
@@ -98,7 +98,7 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   text-decoration: none;
-  color: #f0f0f0;
+  color: #f7f7fa;
   transition: all 0.12s ease-out;
   transition-property: color, padding;
 }
@@ -109,7 +109,7 @@ body {
   width: 0.1rem;
   height: 1.8rem !important;
   margin: 0 1.8rem;
-  background-color: #f0f0f0;
+  background-color: #f7f7fa;
 }
 .main-header__hamburger-container {
   background: none;
@@ -120,7 +120,7 @@ body {
   align-items: center;
 }
 .main-header__hamburger-container__hamburger {
-  color: #f0f0f0;
+  color: #f7f7fa;
   transition: color 0.12s ease-out;
   width: 2.1rem;
   height: 2.1rem;
@@ -168,7 +168,7 @@ body {
   font-size: 1.4rem;
   font-weight: 500;
   text-decoration: none;
-  color: #f0f0f0;
+  color: #f7f7fa;
   transition: all 0.12s ease-out;
   transition-property: color, padding;
 }
@@ -211,10 +211,10 @@ body {
 }
 .page-section {
   width: 100%;
-  background-color: #fafafa;
+  background-color: #fbfafa;
 }
 .page-section--alternate {
-  background-color: #f0f0f0;
+  background-color: #f7f7fa;
 }
 .page-section--main-row {
   padding: 8rem 0;
@@ -400,6 +400,29 @@ button.primary {
   color: white;
   border-color: #1db954;
 }
+button.tag {
+  background-color: #f4f4f5;
+  color: #65656f;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  margin: 0 0.2rem;
+  font-size: 1.2rem;
+  transition: background-color 0.2s;
+  border-radius: 0.6rem;
+  font-weight: 500;
+}
+button.tag:hover {
+  background-color: #e0e0e2;
+}
+button.tag::after {
+  border-radius: 0.6rem;
+  transition: box-shadow 0.35s ease;
+  box-shadow: 0 0 0 0.4rem transparent;
+}
+button.tag:active::after {
+  box-shadow: 0 0 0 0 rgba(101, 101, 111, 0.6);
+  transition: box-shadow 0s;
+}
 button.border {
   background-color: transparent;
   color: #5a5a5a;
@@ -408,21 +431,21 @@ button.border {
 }
 button.border:hover {
   background-color: #1db954;
-  color: #fafafa;
+  color: #fbfafa;
   border-color: #1db954;
 }
 button.wide {
-  width: 16rem;
+  min-width: 16rem;
 }
 button.wider {
-  width: 24rem;
+  min-width: 24rem;
 }
 button.widest {
-  width: 24rem;
+  min-width: 24rem;
 }
 @media (min-width: 992px) {
   button.widest {
-    width: 36rem;
+    min-width: 36rem;
   }
 }
 
@@ -436,9 +459,15 @@ label {
 
 .main-footer {
   background-color: #191414;
-  color: #f0f0f0;
+  color: #f7f7fa;
   font-size: 1.4rem;
   padding: 1.2rem 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
 /*# sourceMappingURL=global.css.map */
