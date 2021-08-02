@@ -157,3 +157,11 @@
     }
   }
 }
+
+.services-row {
+  display: flex;
+  flex-direction: row;
+  &__card {
+    flex: 1;
+  }
+}

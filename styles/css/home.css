@@ -136,4 +136,12 @@
   }
 }
 
+.services-row {
+  display: flex;
+  flex-direction: row;
+}
+.services-row__card {
+  flex: 1;
+}
+
 /*# sourceMappingURL=home.css.map */
