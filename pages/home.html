@@ -98,19 +98,83 @@
             <h2 class="page-section__header__title">چه چیزی تجربه خواهید کرد؟</h2>
           </header>
           <div class="page-section__body services-row">
-            <div class="services-row__card">
+            <div class="services-row__card anim-req-tmp">
               <div class="services-row__card__icon">
-                <svg class="main-header__hamburger-container__hamburger" fill="currentColor">
-                  <use xlink:href="../res/images/utils/icons/menu.svg#icon" />
+                <svg fill="currentColor">
+                  <defs>
+                    <linearGradient id="gradient" x2="0.35" y2="1">
+                      <stop offset="0%" stop-color="var(--color-stop)" />
+                      <stop offset="100%" stop-color="var(--color-bot)" />
+                    </linearGradient>
+                  </defs>
+                  <use xlink:href="../res/images/home/icons/book.svg#icon" />
                 </svg>
               </div>
-              <div class="services-row__card__title"></div>
-              <p class="services-row__card__info"></p>
+              <div class="services-row__card__title">ساخت Playlist</div>
+              <p class="services-row__card__info">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز.
+              </p>
+            </div>
+            <div class="services-row__card anim-req-tmp">
+              <div class="services-row__card__icon">
+                <svg fill="currentColor">
+                  <defs>
+                    <linearGradient id="gradient" x2="0.35" y2="1">
+                      <stop offset="0%" stop-color="var(--color-stop)" />
+                      <stop offset="100%" stop-color="var(--color-bot)" />
+                    </linearGradient>
+                  </defs>
+                  <use xlink:href="../res/images/home/icons/cloud.svg#icon" />
+                </svg>
+              </div>
+              <div class="services-row__card__title">بارگذاری آهنگ ها</div>
+              <p class="services-row__card__info">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
+              </p>
+            </div>
+            <div class="services-row__card anim-req-tmp">
+              <div class="services-row__card__icon">
+                <svg fill="currentColor">
+                  <defs>
+                    <linearGradient id="gradient" x2="0.35" y2="1">
+                      <stop offset="0%" stop-color="var(--color-stop)" />
+                      <stop offset="100%" stop-color="var(--color-bot)" />
+                    </linearGradient>
+                  </defs>
+                  <use xlink:href="../res/images/home/icons/sound-waves.svg#icon" />
+                </svg>
+              </div>
+              <div class="services-row__card__title">کیفیت صدا</div>
+              <p class="services-row__card__info">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز طراحان
+                گرافیک است.
+              </p>
+            </div>
+            <div class="services-row__card anim-req-tmp">
+              <div class="services-row__card__icon">
+                <svg fill="currentColor">
+                  <defs>
+                    <linearGradient id="gradient" x2="0.35" y2="1">
+                      <stop offset="0%" stop-color="var(--color-stop)" />
+                      <stop offset="100%" stop-color="var(--color-bot)" />
+                    </linearGradient>
+                  </defs>
+                  <use xlink:href="../res/images/home/icons/microphone.svg#icon" />
+                </svg>
+              </div>
+              <div class="services-row__card__title">هنرمندان سراسر جهان</div>
+              <p class="services-row__card__info">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه.
+              </p>
             </div>
           </div>
-          <footer class="page-section__footer">
+          <!-- <footer class="page-section__footer">
             <button href="#" class="primary">کپی کردن متن آهنگ</button>
-          </footer>
+          </footer> -->
         </div>
       </section>
 
@@ -296,5 +360,27 @@
     <footer class="main-footer">
       <center><strong>Spotify</strong> - Copyright &copy; 2021 - تمامی حقوق محفوظ میباشد</center>
     </footer>
+
+    <div id="ball" style="width: 5px; height: 5px; background-color: red; position: absolute"></div>
+
+    <script>
+      let cs = document.getElementsByClassName('anim-req');
+      for (const e of cs) {
+        console.log('wow', e.offsetTop);
+      }
+      document.addEventListener('scroll', (se) => {
+        const cur =
+          document.documentElement.scrollTop +
+          (window.innerHeight * document.documentElement.scrollTop) /
+            (document.documentElement.scrollHeight - window.innerHeight + 50);
+        console.log(cur);
+        document.getElementById('ball').style.top = document.documentElement.scrollTop + 'px';
+
+        for (const e of cs)
+          if (!e.classList.contains('anim-start')) {
+            //e.addEventListener('click', (ev) => e.classList.add('anim-start'));
+          }
+      });
+    </script>
   </body>
 </html>

@@ -231,10 +231,12 @@ body {
   font-weight: 500;
 }
 .page-section__header__title {
+  color: #1f202e;
   font-size: 2.8rem;
   margin-top: 1.2rem;
 }
 .page-section__body p {
+  color: #95959b;
   text-align: justify;
   line-height: 2.6rem;
 }
