@@ -32,6 +32,12 @@
   align-items: center;
   justify-content: right;
 }
+.main-song-list > li:not(:first-child) > ul > li:first-child {
+  display: initial;
+}
+.main-song-list > li:not(:first-child) > ul > li:first-child a {
+  display: flex;
+}
 .main-song-list > li:not(:first-child) > ul > li.song-title {
   flex-direction: column;
   align-items: flex-start;
@@ -40,6 +46,7 @@
 .main-song-list > li:not(:first-child) > ul > li.song-title .song-title__title {
   font-weight: 500;
   font-size: 1.4rem;
+  color: #1f202e;
 }
 @media (min-width: 992px) {
   .main-song-list > li:not(:first-child) > ul > li.song-title .song-title__title {
@@ -48,7 +55,12 @@
 }
 .main-song-list > li:not(:first-child) > ul > li.song-title .song-title__subtitle {
   color: #95959b;
-  font-size: 1.3rem;
+  font-size: 1rem;
+}
+@media (min-width: 992px) {
+  .main-song-list > li:not(:first-child) > ul > li.song-title .song-title__subtitle {
+    font-size: 1.3rem;
+  }
 }
 .main-song-list > li:not(:first-child) > ul > li .song-icon {
   color: #272835;
@@ -88,19 +100,30 @@
 }
 @media (min-width: 992px) {
   .main-song-list > li > ul {
-    grid-template-columns: calc(6rem + 2.2rem) 2.5fr 2fr 1.5fr 1fr 4rem 3.6rem;
+    grid-template-columns: calc(7rem + 2.2rem) 2.5fr 2fr 1.5fr 1fr 4rem 3.6rem;
   }
+}
+.main-song-list > li > ul > li:first-child {
+  position: relative;
 }
 .main-song-list > li > ul > li:first-child img {
   width: 4rem;
   height: 4rem;
   border-radius: 0.7rem;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateX(0);
 }
 @media (min-width: 992px) {
   .main-song-list > li > ul > li:first-child img {
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
   }
+}
+.main-song-list > li > ul > li:first-child img.music-cover-placeholder--hidden, .main-song-list > li > ul > li:first-child img.music-cover--hidden {
+  transform: translateX(20%);
+  position: absolute;
+  right: 0;
+  opacity: 0;
 }
 .main-song-list > li > ul > li:nth-child(3), .main-song-list > li > ul > li:nth-child(4) {
   display: none;

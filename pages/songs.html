@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <script src="../scripts/global/main-server-data-api.js"></script>
+    <script src="../scripts/global/templateLoader.js"></script>
+    <script src="../scripts/songs.js" defer></script>
+
     <header class="main-header">
       <div class="main-header__inner">
         <nav class="main-header__nav">
@@ -92,7 +96,7 @@
             </div>
           </header>
 
-          <ul class="main-song-list">
+          <ul class="main-song-list" id="main-song-list">
             <li>
               <ul>
                 <li>عنوان</li>
@@ -105,434 +109,43 @@
               </ul>
             </li>
 
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Pop</button>
-                  <button class="tag">Country</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">سنتی</button>
-                  <button class="tag">Classic</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Rock</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart song-icon--heart--active" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Country</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Pop</button>
-                  <button class="tag">Country</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">سنتی</button>
-                  <button class="tag">Classic</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Rock</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart song-icon--heart--active" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Country</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Pop</button>
-                  <button class="tag">Country</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">سنتی</button>
-                  <button class="tag">Classic</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Rock</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart song-icon--heart--active" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Country</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Pop</button>
-                  <button class="tag">Country</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">سنتی</button>
-                  <button class="tag">Classic</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Rock</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart song-icon--heart--active" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li>
-                  <img src="../res/images/utils/empty-cover.jpg" alt="music cover image" />
-                </li>
-                <li class="song-title">
-                  <h3 class="song-title__title">نام موسیقی</h3>
-                  <div class="song-title__subtitle">هنرمند</div>
-                </li>
-                <li>
-                  <button class="tag">Country</button>
-                </li>
-                <li>4.5</li>
-                <li>2:05</li>
-                <li>
-                  <svg class="song-icon song-icon--heart" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
-                  </svg>
-                </li>
-                <li>
-                  <svg class="song-icon" fill="currentColor">
-                    <use xlink:href="../res/images/utils/icons/play.svg#icon" />
-                  </svg>
-                </li>
-              </ul>
-            </li>
+            <template id="songs-list-item-template">
+              <li>
+                <ul>
+                  <li>
+                    <a href="./song-page.html?id={{id}}">
+                      <img
+                        src="{{cover}}"
+                        class="music-cover music-cover--hidden"
+                        alt="music cover image"
+                        loading="lazy"
+                      />
+                      <img src="../res/images/utils/empty-cover.jpg" class="music-cover-placeholder" alt="" />
+                    </a>
+                  </li>
+                  <li class="song-title">
+                    <a href="./song-page.html?id={{id}}"><h3 class="song-title__title">{{name}}</h3></a>
+                    <div class="song-title__subtitle">{{artist}}</div>
+                  </li>
+                  <li>
+                    <button class="tag">Pop</button>
+                    <button class="tag">Country</button>
+                  </li>
+                  <li>4.5</li>
+                  <li>2:05</li>
+                  <li>
+                    <svg class="song-icon song-icon--heart" fill="currentColor">
+                      <use xlink:href="../res/images/utils/icons/heart-fill.svg#icon" class="fill" />
+                    </svg>
+                  </li>
+                  <li>
+                    <svg class="song-icon" fill="currentColor">
+                      <use xlink:href="../res/images/utils/icons/play.svg#icon" />
+                    </svg>
+                  </li>
+                </ul>
+              </li>
+            </template>
           </ul>
         </div>
       </section>
