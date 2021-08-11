@@ -1,9 +1,9 @@
-const mainHost = 'http://130.185.120.192:5000';
+const mainHost = 'https://songs.code-star.ir';
 
 const fetchSetting = {
   method: 'POST', // *GET, POST, PUT, DELETE, etc.
-  //mode: 'no-cors', // no-cors, *cors, same-origin
-  //cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+  //mode: 'cors', // no-cors, *cors, same-origin
+  //cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
   //credentials: 'same-origin', // include, *same-origin, omit
   headers: {
     Accept: 'application/json',
@@ -16,25 +16,36 @@ const fetchSetting = {
 };
 
 const fetchSettings = {
-  get: () => ({
+  get: (cache = false) => ({
     ...fetchSetting,
     method: 'GET',
+    cache: cache ? 'default' : 'no-cache',
     body: null,
   }),
 
-  post: (body = {}, removeNulls = false) => ({
+  post: (body = {}, removeNulls = false, cache = false) => ({
     ...fetchSetting,
     method: 'POST',
+    cache: cache ? 'default' : 'no-cache',
     body: JSON.stringify((removeNulls && Object.keys(body).forEach((k) => !body[k] && delete body[k])) || body),
   }),
 };
 
-function fetchData(url, settings) {
+function fetchData(url, settings, hasResponseBody = true) {
   return fetch(mainHost + url, settings)
     .then((res) => {
-      return Promise.all([res, res.json()]);
+      let json;
+      //if (hasResponseBody)
+      console.log(url, settings.body);
+      console.log(res);
+      json = res.json().catch(() => ({}));
+      return Promise.all([res, json]);
     })
-    .then(([res, data]) => ({...data, statusCode: res.status}));
+    .then(([res, data]) => ({data, statusCode: res.status}))
+    .then((res) => {
+      if (checkStatusCodeOk(res.statusCode)) return res;
+      throw new Error(res.data.message);
+    });
 }
 
 const mainServer = {
@@ -61,11 +72,14 @@ const mainServer = {
     login: (username, email, password) =>
       fetchData(
         `/user/login`,
-        fetchSettings.post({
-          username,
-          email,
-          password,
-        })
+        fetchSettings.post(
+          {
+            username,
+            email,
+            password,
+          },
+          true
+        )
       ),
     alter: (token, username, email, password, firstName, lastName, avatar, gender, birthDate) =>
       fetchData(
@@ -83,21 +97,26 @@ const mainServer = {
             birthDate,
           },
           true
-        )
+        ),
+        false
       ),
   },
   song: {
-    all: () => fetchData(`/song/all`, fetchSettings.get()),
+    all: () => fetchData(`/song/all`, fetchSettings.get(true)),
     one: (id) => fetchData(`/song/one/${id}`, fetchSettings.get()),
     page: (size, current) =>
       fetchData(
         `/song/page`,
-        fetchSettings.post({
-          size,
-          current,
-          sorter: 'name',
-          desc: false,
-        })
+        fetchSettings.post(
+          {
+            size,
+            current,
+            sorter: 'name',
+            desc: false,
+          },
+          false,
+          true
+        )
       ),
     find: (phrase, count) =>
       fetchData(
@@ -115,9 +134,13 @@ const mainServer = {
     all: (token) =>
       fetchData(
         `/playlist/all`,
-        fetchSettings.post({
-          token,
-        })
+        fetchSettings.post(
+          {
+            token,
+          },
+          false,
+          true
+        )
       ),
     create: (token, name) =>
       fetchData(
@@ -133,7 +156,8 @@ const mainServer = {
         fetchSettings.post({
           token,
           id,
-        })
+        }),
+        false
       ),
     addSong: (token, playlistId, songId) =>
       fetchData(
@@ -142,7 +166,8 @@ const mainServer = {
           token,
           playlistId,
           songId,
-        })
+        }),
+        false
       ),
     removeSong: (token, playlistId, songId) =>
       fetchData(
@@ -151,9 +176,14 @@ const mainServer = {
           token,
           playlistId,
           songId,
-        })
+        }),
+        false
       ),
   },
 };
+
+function checkStatusCodeOk(code) {
+  return Math.floor(code / 10) == 20 || code == 304;
+}
 
 //console.log(fetchSettings.post({hello: '123', num: 12, nn: null}, true));

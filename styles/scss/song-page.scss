@@ -7,8 +7,9 @@
   background-position: center;
   background-size: cover;
   $cfrom: transparentize($g1, 0.02);
-  $cto: transparentize($g1, 0.12);
-  background-image: linear-gradient(to bottom, $cfrom 50%, $cto), url('../../data/songs/1/image.jpg');
+  $cto: transparentize($g1, 0.2);
+  --bg-image: transparent;
+  background-image: linear-gradient(to bottom, $cfrom 50%, $cto), var(--bg-image);
 
   &__inner {
     display: flex;
@@ -32,7 +33,13 @@
       flex: 1;
       padding: 3rem 0 0;
       & > h2 {
-        margin-bottom: 2.5rem;
+        color: $g10;
+        margin-bottom: 1rem;
+      }
+      & > h3 {
+        color: $g9;
+        font-weight: 400;
+        margin-bottom: 3.5rem;
       }
     }
   }
@@ -53,7 +60,10 @@
       & > div {
         padding: 3rem 3rem 0;
         & > h2 {
-          margin-bottom: 5rem;
+          margin-bottom: 1rem;
+        }
+        & > h3 {
+          margin-bottom: 6.5rem;
         }
       }
     }
@@ -73,5 +83,15 @@
     & button {
       margin-top: 2rem;
     }
+  }
+}
+
+#song-player {
+  text-align: center;
+  padding: 0 2rem;
+  & .player {
+    width: 100%;
+    border-radius: 100rem;
+    border: solid 0.1rem $c-iconbg;
   }
 }

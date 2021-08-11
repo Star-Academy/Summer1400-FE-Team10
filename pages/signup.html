@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <script src="../scripts/global/main-server-data-api.js"></script>
+    <script src="../scripts/global/storage.js"></script>
+    <script src="../scripts/signup.js" defer></script>
+
     <header class="main-header">
       <div class="main-header__inner">
         <nav class="main-header__nav">
@@ -37,32 +41,91 @@
           <div class="form-container">
             <header>
               <h2>ثبت نام</h2>
-              <label>یا <a href="./login.html">ورود به حساب کاربری</a></label>
+              <label>یا <a href="./login.html" class="colored static">ورود به حساب کاربری</a></label>
             </header>
             <form>
               <label class="label-big-input">
                 نام کاربری
-                <input type="text" dir="ltr" placeholder="username" name="username" required />
+                <input
+                  type="text"
+                  class="big english-right"
+                  placeholder="نام کاربری خود را وارد کنید"
+                  name="username"
+                  id="username"
+                  required
+                />
+                <div class="input-error">نام کاربری صحیح نمی باشد.</div>
               </label>
               <label class="label-big-input">
                 ایمیل
-                <input type="email" dir="ltr" placeholder="email" name="email" required />
+                <input
+                  type="email"
+                  class="big english-right"
+                  placeholder="ایمیل خود را وارد کنید"
+                  name="email"
+                  id="email"
+                  required
+                />
+                <div class="input-error"></div>
               </label>
               <label class="label-big-input">
                 رمز عبور
-                <input type="password" dir="ltr" placeholder="password" name="password" required />
+                <input
+                  type="password"
+                  class="big english-right"
+                  id="password"
+                  placeholder="رمز عبور خود را وارد کنید"
+                  name="password"
+                  required
+                  value="e3e3e3e3"
+                />
+                <div class="input-error"></div>
               </label>
               <label class="label-big-input">
                 تکرار رمز عبور
-                <input type="password" dir="ltr" placeholder="confirm password" name="password" required />
+                <input
+                  type="password"
+                  class="big english-right"
+                  placeholder="رمز عبور خود را تکرار کنید"
+                  id="conf-password"
+                  required
+                  value="e3e3e3e3"
+                />
+                <div class="input-error"></div>
               </label>
               <label class="label-checkbox">
-                <input type="checkbox" />
+                <input type="checkbox" id="show-password" />
                 نمایش رمز عبور
               </label>
+
+              <label class="label-big-input">
+                نام
+                <input
+                  type="email"
+                  class="big"
+                  placeholder="نام خود را وارد کنید"
+                  name="person_name"
+                  id="person-name"
+                />
+                <div class="input-error"></div>
+              </label>
+              <label class="label-big-input">
+                نام خانوادگی
+                <input
+                  type="password"
+                  class="big"
+                  id="person-family"
+                  placeholder="نام خانوادگی خود را وارد کنید"
+                  name="person_family"
+                />
+                <div class="input-error"></div>
+              </label>
               <div class="signup-submit-container">
-                <button type="submit" class="big primary">ثبت نام</button>
+                <button type="submit" id="submit" class="big primary">ثبت نام</button>
               </div>
+              <footer>
+                <div class="input-error big" id="main-login-error"></div>
+              </footer>
             </form>
           </div>
         </section>

@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <script src="../scripts/global/scrollAnimation.js" defer></script>
+
     <header class="main-header">
       <div class="main-header__inner">
         <nav class="main-header__nav">
@@ -98,7 +100,7 @@
             <h2 class="page-section__header__title">چه چیزی تجربه خواهید کرد؟</h2>
           </header>
           <div class="page-section__body services-row">
-            <div class="services-row__card anim-req-tmp">
+            <div class="services-row__card anim-req">
               <div class="services-row__card__icon">
                 <svg fill="currentColor">
                   <defs>
@@ -116,7 +118,7 @@
                 متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز.
               </p>
             </div>
-            <div class="services-row__card anim-req-tmp">
+            <div class="services-row__card anim-req">
               <div class="services-row__card__icon">
                 <svg fill="currentColor">
                   <defs>
@@ -134,7 +136,7 @@
                 متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
               </p>
             </div>
-            <div class="services-row__card anim-req-tmp">
+            <div class="services-row__card anim-req">
               <div class="services-row__card__icon">
                 <svg fill="currentColor">
                   <defs>
@@ -153,7 +155,7 @@
                 گرافیک است.
               </p>
             </div>
-            <div class="services-row__card anim-req-tmp">
+            <div class="services-row__card anim-req">
               <div class="services-row__card__icon">
                 <svg fill="currentColor">
                   <defs>
@@ -360,27 +362,5 @@
     <footer class="main-footer">
       <center><strong>Spotify</strong> - Copyright &copy; 2021 - تمامی حقوق محفوظ میباشد</center>
     </footer>
-
-    <div id="ball" style="width: 5px; height: 5px; background-color: red; position: absolute"></div>
-
-    <script>
-      let cs = document.getElementsByClassName('anim-req');
-      for (const e of cs) {
-        console.log('wow', e.offsetTop);
-      }
-      document.addEventListener('scroll', (se) => {
-        const cur =
-          document.documentElement.scrollTop +
-          (window.innerHeight * document.documentElement.scrollTop) /
-            (document.documentElement.scrollHeight - window.innerHeight + 50);
-        console.log(cur);
-        document.getElementById('ball').style.top = document.documentElement.scrollTop + 'px';
-
-        for (const e of cs)
-          if (!e.classList.contains('anim-start')) {
-            //e.addEventListener('click', (ev) => e.classList.add('anim-start'));
-          }
-      });
-    </script>
   </body>
 </html>

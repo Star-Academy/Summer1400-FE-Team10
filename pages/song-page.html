@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../styles/css/global.css" />
     <link rel="stylesheet" href="../styles/css/song-page.css" />
-    <title>آهنگ زیبای محمد اصفهانی به نام مثل گل</title>
+    <title>صفحه آهنگ</title>
   </head>
 
   <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../scripts/global/main-server-data-api.js"></script>
+    <script src="../scripts/global/storage.js"></script>
+    <script src="../scripts/song-page.js" defer></script>
+
     <header class="main-header">
       <div class="main-header__inner">
         <nav class="main-header__nav">
@@ -68,18 +73,23 @@
       </div>
     </header>
 
-    <section class="song-banner page-section">
+    <section class="song-banner page-section" id="song-banner">
       <div class="song-banner__inner page-section-inner">
-        <img src="../data/songs/1/image.jpg" alt="عکس آهنگ" />
-        <div>
-          <h2>مثل گل - محمد اصفهانی</h2>
-          <p>دسته بندی آهنگ: سنتی</p>
-          <p>تاریخ بارگذاری: 1400/1/1</p>
+        <img src="../res/images/utils/empty-cover.jpg" alt="عکس آهنگ" id="song-cover" />
+        <div id="song-info">
+          <h2 id="song-name"></h2>
+          <h3 id="song-artist"></h3>
+          <p>تاریخ انتشار: <span id="song-publish-date"></span></p>
         </div>
       </div>
     </section>
 
     <main>
+      <section class="page-section page-section--main-row page-section--alternate">
+        <div class="page-section-inner">
+          <div class="page-section__body" id="song-player"></div>
+        </div>
+      </section>
       <section class="page-section page-section--main-row lyric-section">
         <div class="page-section-inner">
           <header class="page-section__header">
@@ -87,23 +97,10 @@
             <h2 class="page-section__header__title">متن آهنگ</h2>
           </header>
           <div class="page-section__body">
-            <p>
-              پدرا پدربزرگا ، مادرا مادربزرگا ، مثلِ گل مثلِ بهارین<br />
-              دلامون نازک و نرمه ، چشامون چشمه شرمه ، اشکامونو درنیارین<br />
-              کاشکی می شد برای بزرگترامون قصرای طلا می ساختیم<br />
-              مثِ آب چشمه ها آیینه هاشو صاف و پر جلا می ساختیم<br />
-              ابر فتنه وقتی سنگ غم می بارید ، سینه مونو سپر بلا می ساختیم<br />
-              چشامون دروغ نمیگن واسه ما چراغ راهین<br />
-              گرچه پشتتون خمیدس واسه ما پشت و پناهین<br />
-              ماها مثل شب و روزیم شما مثل مهر و ماهین<br />
-              کاشکی می شد با شما تو شهر عاشقا بمونیم<br />
-              مثل اون قدیم ندیما قصه وفا بخونیم<br />
-              رمز روزا رو بفهمیم<br />
-              راز شب هارو بدونیم
-            </p>
+            <p id="song-lyrics"></p>
           </div>
           <footer class="page-section__footer">
-            <button href="#" class="primary">کپی کردن متن آهنگ</button>
+            <button id="song-copy-lyrics" class="primary">کپی کردن متن آهنگ</button>
           </footer>
         </div>
       </section>
@@ -115,9 +112,9 @@
           </header>
           <div class="page-section__body">
             <center>
-              <button class="big wider">دانلود با کیفیت 128kbps</button>
+              <a id="song-download" download><button class="big wider">دانلود با کیفیت 128kbps</button></a>
               <br />
-              <button class="big primary wider">دانلود با کیفیت 320kbps</button>
+              <a id="song-download-hq" download><button class="big primary wider">دانلود با کیفیت 320kbps</button></a>
             </center>
           </div>
         </div>

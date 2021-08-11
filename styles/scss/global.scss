@@ -364,25 +364,54 @@ h6 {
 
 a {
   text-decoration: none;
+  color: inherit;
+  &.colored {
+    color: $c-link;
+    &:visited {
+      color: $c-link-visited;
+    }
+
+    &.static {
+      &:visited {
+        color: $c-link;
+      }
+    }
+  }
 }
+
 input[type='text'],
 input[type='email'],
-input[type='password'] {
+input[type='password'],
+input[type='number'] {
   font-family: inherit;
-  border: solid 0.1rem #dedede;
+  border: solid 0.1rem transparent;
   border-radius: 0.3rem;
   padding: 0.2rem 0.8rem;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, background-color 0.2s;
   $color: $primary-color;
   box-shadow: 0 0 0 0 transparentize($color, 0.85);
   outline: none;
+  color: $c-inputfg;
+  background-color: $c-inputbg;
+  height: 3rem;
 
   &::placeholder {
-    color: #ccc;
+    color: $g7;
   }
   &:focus {
     box-shadow: 0 0 0 0.3rem transparentize($color, 0.85);
     border-color: $primary-lighter-color;
+    background-color: $g10 !important;
+  }
+  &.onbg {
+    background-color: $c-inputbg-onbg;
+  }
+  &.big {
+    height: 4rem;
+  }
+  &.english-right {
+    direction: ltr;
+    text-align: right;
   }
 }
 
@@ -441,7 +470,11 @@ button {
     $color: $primary-color;
     background-color: $color;
     color: white;
-    border-color: $color;
+    border-color: transparent;
+
+    &:disabled {
+      background-color: mix($color, $g10, 70);
+    }
   }
 
   &.tag {
@@ -507,6 +540,29 @@ label {
   cursor: pointer;
 }
 
+select {
+  font: inherit;
+  color: $c-inputfg;
+  font-weight: 500;
+  line-height: 100%;
+  border-radius: 0.4rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  background-color: $c-inputbg;
+
+  padding: 0.6rem 1.2rem;
+  font-size: 1.6rem;
+
+  &.small {
+    padding: 0.4rem 0.6rem 0.3rem;
+    font-size: 1.3rem;
+  }
+  &.onbg {
+    background-color: $c-inputbg-onbg;
+  }
+}
+
 .main-footer {
   background-color: $darkbg;
   color: $g8;
@@ -518,4 +574,8 @@ ul,
 li {
   margin: 0;
   padding: 0;
+}
+
+ul {
+  list-style: none;
 }

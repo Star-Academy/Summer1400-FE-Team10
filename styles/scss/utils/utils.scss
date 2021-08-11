@@ -3,3 +3,30 @@ $mobtab: '(min-width: 540px)';
 $tablet: '(min-width: 992px)';
 $desktop: '(min-width: 1200px)';
 $wide-desktop: '(min-width: 1600px)';
+
+@mixin anim-fade-in-vertical($name, $n: -20%, $s: 0.6s, $e: ease) {
+  animation: #{$name} $s $e;
+  @keyframes #{$name} {
+    from {
+      transform: translateY($n);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+@mixin anim-fade-in-horizontal($name, $n: 20%, $s: 0.6s, $e: ease) {
+  animation: #{$name} $s $e;
+  @keyframes #{$name} {
+    from {
+      transform: translateX($n);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}

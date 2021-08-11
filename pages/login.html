@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <script src="../scripts/global/main-server-data-api.js"></script>
+    <script src="../scripts/global/storage.js"></script>
+    <script src="../scripts/login.js" defer></script>
+
     <header class="main-header">
       <div class="main-header__inner">
         <nav class="main-header__nav">
@@ -37,31 +41,50 @@
           <div class="form-container">
             <header>
               <h2>ورود</h2>
-              <label>یا <a href="./signup.html">ساخت حساب جدید</a></label>
+              <label>یا <a class="colored static" href="./signup.html">ساخت حساب جدید</a></label>
             </header>
-            <form>
+            <form id="login-form">
               <label class="label-big-input">
                 نام کاربری
-                <input type="text" dir="ltr" placeholder="username" name="username" required />
+                <input
+                  type="text"
+                  class="big english-right"
+                  placeholder="نام کاربری خود را وارد کنید"
+                  name="username"
+                  id="username"
+                  required
+                />
+                <div class="input-error"></div>
               </label>
               <label class="label-big-input">
                 رمز عبور
-                <input type="password" dir="ltr" placeholder="password" name="password" required />
+                <input
+                  type="password"
+                  class="big english-right"
+                  placeholder="رمز عبور خود را وارد کنید"
+                  name="password"
+                  id="password"
+                  required
+                />
+                <div class="input-error"></div>
               </label>
               <label class="label-checkbox">
-                <input type="checkbox" />
+                <input type="checkbox" id="show-password" />
                 نمایش رمز عبور
               </label>
               <div class="login-submit-container">
                 <label class="label-checkbox">
-                  <input type="checkbox" checked="checked" />
+                  <input type="checkbox" checked="checked" id="remember-me" />
                   مرا به خاطر داشته باش
                 </label>
-                <button type="submit" class="primary">ورود</button>
+                <button type="submit" class="primary" id="submit">ورود</button>
               </div>
               <div class="form-footer">
-                <a href="#"> رمز خود را فراموش کرده‌اید؟ </a>
+                <a class="colored static" href="#"> رمز خود را فراموش کرده‌اید؟ </a>
               </div>
+              <footer>
+                <div class="input-error big" id="main-login-error"></div>
+              </footer>
             </form>
           </div>
         </section>
