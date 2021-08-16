@@ -1,60 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/css/global.css" />
+    <link rel="stylesheet" href="../styles/css/home.css" />
+    <title>Home</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-</head>
+  <body>
+    <header class="main-header">
+      <div class="main-header__inner">
+        <nav class="main-header__nav">
+          <ul>
+            <li>
+              <a href="./home.html">خانه</a>
+            </li>
+            <li>
+              <a href="./songs.html">آهنگ ها</a>
+            </li>
+            <li>
+              <a href="">دانلود</a>
+            </li>
+            <li class="main-header__nav__seperator"></li>
+            <li>
+              <a href="./signup.html">ثبت نام</a>
+            </li>
+            <li>
+              <a href="./login.html">ورود</a>
+            </li>
+          </ul>
+        </nav>
+        <label class="main-header__hamburger-container">
+          <input type="checkbox" />
+          <svg class="main-header__hamburger-container__hamburger" fill="currentColor">
+            <use xlink:href="../res/images/utils/icons/menu.svg#icon" />
+          </svg>
+          <div class="ham-menu-container">
+            <div class="ham-menu-container__ham-menu">
+              <ul>
+                <li><a></a></li>
+                <li>
+                  <a href="./home.html">خانه</a>
+                </li>
+                <li>
+                  <a href="./songs.html">آهنگ ها</a>
+                </li>
+                <li>
+                  <a href="">دانلود</a>
+                </li>
+                <li><a></a></li>
+                <li>
+                  <a href="./signup.html">ثبت نام</a>
+                </li>
+                <li>
+                  <a href="./login.html">ورود</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </label>
+        <a class="main-header__logo-container" href="./home.html">
+          <svg class="main-header__logo-container__logo" fill="currentColor">
+            <use xlink:href="../res/images/utils/brand-logo.svg#logo" />
+          </svg>
+        </a>
+      </div>
+    </header>
 
-<body>
-
-  <header class="main-header">
-    <div class="main-header__logo-container">
-      <img src="../res/images/utils/brand-logo.svg" alt="logo" width="180" />
-    </div>
-    <nav class="main-header__nav">
-      <ul>
-        <li>
-          <a href="#">خانه</a>
-        </li>
-        <li>
-          <a href="#">آهنگ ها</a>
-        </li>
-        <li>
-          <a href="">دانلود</a>
-        </li>
-        <li class="main-header__nav__seperator"></li>
-        <li>
-          <a href="./signup.html">ثبت نام</a>
-        </li>
-        <li>
-          <a href="./login.html">ورود</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section>
-      <h3>Introduction</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, quas voluptates a et at molestias dolore facilis doloribus explicabo. Laboriosam neque reprehenderit unde alias, illo culpa. Rem nulla nisi repudiandae.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam qui numquam, explicabo at saepe inventore consequatur rerum placeat officia blanditiis, repellat illo voluptatibus? Ducimus accusantium cum doloremque, soluta delectus illum!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit reiciendis dignissimos, quos labore alias repellat magni exercitationem quia iste beatae quo tempore, fuga sequi, laboriosam enim adipisci ab! Odit, neque!
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum facere officiis iure adipisci doloremque eius ad ipsam dolor soluta harum! Harum beatae aspernatur assumenda in praesentium necessitatibus veniam et quia?
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit maxime maiores dolore inventore totam laborum quam recusandae similique, voluptatum sed cupiditate, nisi consectetur nihil cumque sint placeat esse nobis suscipit.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores perferendis nobis tenetur autem numquam quas asperiores fugit dignissimos. Nisi animi voluptatem tenetur odit suscipit molestiae quo consequatur doloremque illum iusto!
-      </p>
+    <section class="main-banner">
+      <div class="page-section-inner">
+        <div class="main-banner__body">
+          <div class="flex-spacer"></div>
+          <div class="main-banner__body__title-box">
+            <h3 class="main-banner__body__title">صفحه نخست</h3>
+            <h1 class="main-banner__body__slogan">
+              به <span>صدای قلبت</span> گوش کن،<br />
+              با <span>ضربان قلبت</span> حرکت کن!
+            </h1>
+            <p class="main-banner__body__info">
+              تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.<br />
+              چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
+            </p>
+          </div>
+          <div class="flex-spacer"></div>
+          <button class="main-banner__body__learn-more widest big primary">اطلاعات بیشتر</button>
+        </div>
+      </div>
     </section>
-  </main>
 
-  <footer>
-    <hr>
-    <center><strong>Spotify</strong> - Copyright &copy; 2021 - تمامی حقوق محفوظ میباشد</center>
-  </footer>
+    <main>
+      <section class="page-section page-section--main-row">
+        <div class="page-section-inner">
+          <header class="page-section__header">
+            <h4 class="page-section__header__info">خدمات ما</h4>
+            <h2 class="page-section__header__title">چه چیزی تجربه خواهید کرد؟</h2>
+          </header>
+          <div class="page-section__body services-row">
+            <div class="services-row__card anim-req-tmp">
+              <div class="services-row__card__icon">
+                <svg fill="currentColor">
+                  <defs>
+                    <linearGradient id="gradient" x2="0.35" y2="1">
+                      <stop offset="0%" stop-color="var(--color-stop)" />
+                      <stop offset="100%" stop-color="var(--color-bot)" />
+                    </linearGradient>
+                  </defs>
+                  <use xlink:href="../res/images/home/icons/book.svg#icon" />
+                </svg>
+              </div>
+              <div class="services-row__card__title">ساخت Playlist</div>
+              <p class="services-row__card__info">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز.
+              </p>
+            </div>
+            <div class="services-row__card anim-req-tmp">
+              <div class="services-row__card__icon">
+                <svg fill="currentColor">
+                  <defs>
+                    <linearGradient id="gradient" x2="0.35" y2="1">
+                      <stop offset="0%" stop-color="var(--color-stop)" />
+                      <stop offset="100%" stop-color="var(--color-bot)" />
+                    </linearGradient>
+                  </defs>
+                  <use xlink:href="../res/images/home/icons/cloud.svg#icon" />
+                </svg>
+              </div>
+              <div class="services-row__card__title">بارگذاری آهنگ ها</div>
+              <p class="services-row__card__info">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
+              </p>
+            </div>
+            <div class="services-row__card anim-req-tmp">
+              <div class="services-row__card__icon">
+                <svg fill="currentColor">
+                  <defs>
+                    <linearGradient id="gradient" x2="0.35" y2="1">
+                      <stop offset="0%" stop-color="var(--color-stop)" />
+                      <stop offset="100%" stop-color="var(--color-bot)" />
+                    </linearGradient>
+                  </defs>
+                  <use xlink:href="../res/images/home/icons/sound-waves.svg#icon" />
+                </svg>
+              </div>
+              <div class="services-row__card__title">کیفیت صدا</div>
+              <p class="services-row__card__info">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز طراحان
+                گرافیک است.
+              </p>
+            </div>
+            <div class="services-row__card anim-req-tmp">
+              <div class="services-row__card__icon">
+                <svg fill="currentColor">
+                  <defs>
+                    <linearGradient id="gradient" x2="0.35" y2="1">
+                      <stop offset="0%" stop-color="var(--color-stop)" />
+                      <stop offset="100%" stop-color="var(--color-bot)" />
+                    </linearGradient>
+                  </defs>
+                  <use xlink:href="../res/images/home/icons/microphone.svg#icon" />
+                </svg>
+              </div>
+              <div class="services-row__card__title">هنرمندان سراسر جهان</div>
+              <p class="services-row__card__info">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه.
+              </p>
+            </div>
+          </div>
+          <!-- <footer class="page-section__footer">
+            <button href="#" class="primary">کپی کردن متن آهنگ</button>
+          </footer> -->
+        </div>
+      </section>
 
-</body>
+      <section class="page-section page-section--main-row page-section--alternate section-about-us">
+        <div class="page-section-inner">
+          <header class="page-section__header">
+            <h4 class="page-section__header__info">درباره ما</h4>
+            <h2 class="page-section__header__title">در Spotify چه میگذرد؟</h2>
+          </header>
+          <div class="page-section__body">
+            <p class="section-about-us__important-text">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+              متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+              متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته.
+            </p>
+          </div>
+          <footer class="page-section__footer">
+            <button href="#" class="primary">اطلاعات بیشتر</button>
+          </footer>
+        </div>
+      </section>
 
+      <section class="page-section page-section--main-row">
+        <div class="page-section-inner">
+          <header class="page-section__header page-section__header--margin">
+            <h4 class="page-section__header__info">دسته بندی</h4>
+            <h2 class="page-section__header__title">انواع موسیقی ها</h2>
+          </header>
+          <div class="row-parts row-parts--reverse">
+            <div class="row-part--big">
+              <img src="../res/images/home/gens/classic.jpg" alt="" width="100%" class="general-img" />
+            </div>
+            <div class="row-part--align">
+              <div class="page-section__body">
+                <h2>موسیقی کلاسیک</h2>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته.
+                </p>
+              </div>
+              <footer class="page-section__footer page-section__footer--right">
+                <button href="#" class="border">به این سبک علاقه دارم</button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-section page-section--main-row page-section--alternate">
+        <div class="page-section-inner">
+          <div class="row-parts">
+            <div class="row-part--big row-part--align">
+              <img src="../res/images/home/gens/pop.jpg" alt="" width="100%" class="general-img" />
+            </div>
+            <div class="row-part--align">
+              <div class="page-section__body">
+                <h2>موسیقی Pop</h2>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته.
+                </p>
+              </div>
+              <footer class="page-section__footer page-section__footer--right">
+                <button href="#" class="border">به این سبک علاقه دارم</button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-section page-section--main-row">
+        <div class="page-section-inner">
+          <div class="row-parts row-parts--reverse">
+            <div class="row-part--big row-part--align">
+              <img src="../res/images/home/gens/hip-hop.jpg" alt="" width="100%" class="general-img" />
+            </div>
+            <div class="row-part--align">
+              <div class="page-section__body">
+                <h2>موسیقی Hip-Hop</h2>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته.
+                </p>
+              </div>
+              <footer class="page-section__footer page-section__footer--right">
+                <button href="#" class="border">به این سبک علاقه دارم</button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-section page-section--main-row page-section--alternate">
+        <div class="page-section-inner">
+          <div class="row-parts">
+            <div class="row-part--big row-part--align">
+              <img src="../res/images/home/gens/rock.jpg" alt="" width="100%" class="general-img" />
+            </div>
+            <div class="row-part--align">
+              <div class="page-section__body">
+                <h2>موسیقی Rock</h2>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته.
+                </p>
+              </div>
+              <footer class="page-section__footer page-section__footer--right">
+                <button href="#" class="border">به این سبک علاقه دارم</button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-section page-section--main-row">
+        <div class="page-section-inner">
+          <div class="row-parts row-parts--reverse">
+            <div class="row-part--big row-part--align">
+              <img src="../res/images/home/gens/jazz.jpg" alt="" width="100%" class="general-img" />
+            </div>
+            <div class="row-part--align">
+              <div class="page-section__body">
+                <h2>موسیقی Jazz</h2>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته.
+                </p>
+              </div>
+              <footer class="page-section__footer page-section__footer--right">
+                <button href="#" class="border">به این سبک علاقه دارم</button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-section page-section--main-row page-section--alternate">
+        <div class="page-section-inner">
+          <div class="row-parts">
+            <div class="row-part--big row-part--align">
+              <img src="../res/images/home/gens/persian-classic.jpg" alt="" width="100%" class="general-img" />
+            </div>
+            <div class="row-part--align">
+              <div class="page-section__body">
+                <h2>موسیقی ایرانی سنتی</h2>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته.
+                </p>
+              </div>
+              <footer class="page-section__footer page-section__footer--right">
+                <button href="#" class="border">به این سبک علاقه دارم</button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-section page-section--main-row">
+        <div class="page-section-inner">
+          <div class="row-parts row-parts--reverse">
+            <div class="row-part--big row-part--align">
+              <img src="../res/images/home/gens/country.jpg" alt="" width="100%" class="general-img" />
+            </div>
+            <div class="row-part--align">
+              <div class="page-section__body">
+                <h2>موسیقی Country</h2>
+                <p>
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                  متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                  کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته.
+                </p>
+              </div>
+              <footer class="page-section__footer page-section__footer--right">
+                <button href="#" class="border">به این سبک علاقه دارم</button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <center><strong>Spotify</strong> - Copyright &copy; 2021 - تمامی حقوق محفوظ میباشد</center>
+    </footer>
+
+    <div id="ball" style="width: 5px; height: 5px; background-color: red; position: absolute"></div>
+
+    <script>
+      let cs = document.getElementsByClassName('anim-req');
+      for (const e of cs) {
+        console.log('wow', e.offsetTop);
+      }
+      document.addEventListener('scroll', (se) => {
+        const cur =
+          document.documentElement.scrollTop +
+          (window.innerHeight * document.documentElement.scrollTop) /
+            (document.documentElement.scrollHeight - window.innerHeight + 50);
+        console.log(cur);
+        document.getElementById('ball').style.top = document.documentElement.scrollTop + 'px';
+
+        for (const e of cs)
+          if (!e.classList.contains('anim-start')) {
+            //e.addEventListener('click', (ev) => e.classList.add('anim-start'));
+          }
+      });
+    </script>
+  </body>
 </html>

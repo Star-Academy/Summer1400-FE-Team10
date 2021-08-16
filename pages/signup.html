@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/css/global.css" />
+    <link rel="stylesheet" href="../styles/css/login.css" />
+    <title>Spotify - Signup</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spotify - Signup</title>
-</head>
+  <body>
+    <header class="main-header">
+      <div class="main-header__inner">
+        <nav class="main-header__nav">
+          <ul>
+            <li>
+              <a href="">دانلود نرم افزار</a>
+            </li>
+          </ul>
+        </nav>
 
-<body>
+        <a class="main-header__logo-container" href="./home.html">
+          <svg class="main-header__logo-container__logo" fill="currentColor">
+            <use xlink:href="../res/images/utils/brand-logo.svg#logo" />
+          </svg>
+        </a>
+      </div>
+    </header>
 
-  <header>
-    <nav>
-      <ul>
-        <li> <a href="#"></a> </li>
-        <li> <img src="../res/images/utils/brand-logo.svg" alt="logo" width="180" /> </li>
-        <li> <a href="#">دانلود نرم افزار</a> </li>
-      </ul>
-    </nav>
-  </header>
+    <main>
+      <article>
+        <aside>
+          <img src="../res/images/login/login-image.jpg" class="signup-img" alt="login page image" />
+        </aside>
+        <section>
+          <div class="form-container">
+            <header>
+              <h2>ثبت نام</h2>
+              <label>یا <a href="./login.html">ورود به حساب کاربری</a></label>
+            </header>
+            <form>
+              <label class="label-big-input">
+                نام کاربری
+                <input type="text" dir="ltr" placeholder="username" name="username" required />
+              </label>
+              <label class="label-big-input">
+                ایمیل
+                <input type="email" dir="ltr" placeholder="email" name="email" required />
+              </label>
+              <label class="label-big-input">
+                رمز عبور
+                <input type="password" dir="ltr" placeholder="password" name="password" required />
+              </label>
+              <label class="label-big-input">
+                تکرار رمز عبور
+                <input type="password" dir="ltr" placeholder="confirm password" name="password" required />
+              </label>
+              <label class="label-checkbox">
+                <input type="checkbox" />
+                نمایش رمز عبور
+              </label>
+              <div class="signup-submit-container">
+                <button type="submit" class="big primary">ثبت نام</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </article>
+    </main>
 
-  <aside>
-    <section>
-      <img src="../res/images/login/login-image.jpg" alt="signup page image" width="40%" />
-    </section>
-  </aside>
-
-  <main>
-    <section>
-      <header>
-        <div> <h2> ثبت نام </h2></div>
-        <div> یا <a href="#">ورود به حساب کاربری</a></div>
-      </header>
-      <form>
-        <label>
-          نام کاربری:
-          <input type="text" placeholder="Username" name="username" required>
-        </label>
-        <label>
-          ایمیل:
-          <input type="email" placeholder="Email" name="email" required>
-        </label>
-        <label>
-          رمز عبور:
-          <input type="password" placeholder="Password" name="password" required>
-        </label>
-        <label>
-          تکرار رمز عبور:
-          <input type="password" placeholder="Confirm Password" name="confirm_password" required>
-        </label>
-        <label>
-          <input type="checkbox">
-          نمایش رمز عبور
-        </label>
-        <button type="submit">ثبت نام</button>
-      </form>
-    </section>
-  </main>
-  
-  <footer>
-    <hr>
-    <center>صفحه ثبت نام Spotify</center>
-  </footer>
-  
-</body>
-
+    <footer class="main-footer">
+      <center>صفحه ثبت نام Spotify</center>
+    </footer>
+  </body>
 </html>

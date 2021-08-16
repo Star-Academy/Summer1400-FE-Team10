@@ -1,0 +1,118 @@
+@import './utils/utils.scss';
+@import './utils/colors.scss';
+
+body {
+  background-color: white;
+  & > main > article {
+    display: flex;
+    flex-direction: row;
+
+    margin: 3rem 0 15rem;
+    @media #{$mobtab} {
+      margin: 8rem 0 13rem;
+    }
+
+    & > section {
+      flex: 1;
+    }
+
+    & > aside {
+      flex: 1;
+      display: none;
+      align-items: center;
+      justify-content: flex-end;
+      & > img {
+        width: 100%;
+        max-width: 65rem;
+        margin-bottom: 4rem;
+        &.signup-img {
+          margin-bottom: 6rem;
+        }
+      }
+      @media #{$tablet} {
+        display: flex;
+      }
+    }
+  }
+}
+
+.form-container {
+  //background-color: #fcfcfc;
+
+  width: 100%;
+  max-width: 42rem;
+
+  & > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 4em;
+    & h2 {
+      font-size: 2.8rem;
+    }
+  }
+  & form {
+    @media #{$tablet} {
+      padding-right: 1.2rem;
+    }
+  }
+  & label {
+    font-size: 1.4rem;
+  }
+  & label.label-big-input {
+    font-size: 1.8rem;
+    display: block;
+    margin: 2em 0 0.8em;
+
+    & input {
+      display: block;
+      margin-top: 1.2rem;
+      width: 100%;
+      height: 4rem;
+      background-color: inherit;
+    }
+  }
+  & label.label-checkbox {
+    & input {
+      transform: translateY(0.25rem);
+    }
+  }
+
+  & .login-submit-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4em;
+  }
+
+  & .signup-submit-container {
+    text-align: left;
+    margin-top: 4em;
+    & > button {
+      width: 100%;
+    }
+  }
+
+  & .form-footer {
+    margin-top: 3em;
+    text-align: left;
+    font-size: 1.3rem;
+  }
+
+  margin: auto;
+  padding: 2rem;
+
+  @media #{$tablet} {
+    & {
+      margin: 0;
+    }
+  }
+}
+
+.main-header__inner {
+  justify-content: center;
+  @media #{$tablet} {
+    justify-content: space-between;
+  }
+}

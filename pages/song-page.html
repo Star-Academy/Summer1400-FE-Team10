@@ -1,70 +1,158 @@
 <html>
-    <head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/css/global.css" />
+    <link rel="stylesheet" href="../styles/css/song-page.css" />
+    <title>آهنگ زیبای محمد اصفهانی به نام مثل گل</title>
+  </head>
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>آهنگ زیبای محمد اصفهانی به نام مثل گل</title>
-    </head>
-    <body>
-
-        <header class="main-header">
-            <div class="main-header__logo-container">
-                <img src="../res/images/utils/brand-logo.svg" alt="logo" width="180" />
+  <body>
+    <header class="main-header">
+      <div class="main-header__inner">
+        <nav class="main-header__nav">
+          <ul>
+            <li>
+              <a href="./home.html">خانه</a>
+            </li>
+            <li>
+              <a href="./songs.html">آهنگ ها</a>
+            </li>
+            <li>
+              <a href="">دانلود</a>
+            </li>
+            <li class="main-header__nav__seperator"></li>
+            <li>
+              <a href="./signup.html">ثبت نام</a>
+            </li>
+            <li>
+              <a href="./login.html">ورود</a>
+            </li>
+          </ul>
+        </nav>
+        <label class="main-header__hamburger-container">
+          <input type="checkbox" />
+          <svg class="main-header__hamburger-container__hamburger" fill="currentColor">
+            <use xlink:href="../res/images/utils/icons/menu.svg#icon" />
+          </svg>
+          <div class="ham-menu-container">
+            <div class="ham-menu-container__ham-menu">
+              <ul>
+                <li><a></a></li>
+                <li>
+                  <a href="./home.html">خانه</a>
+                </li>
+                <li>
+                  <a href="./songs.html">آهنگ ها</a>
+                </li>
+                <li>
+                  <a href="">دانلود</a>
+                </li>
+                <li><a></a></li>
+                <li>
+                  <a href="./signup.html">ثبت نام</a>
+                </li>
+                <li>
+                  <a href="./login.html">ورود</a>
+                </li>
+              </ul>
             </div>
-            <nav class="main-header__nav">
-                <ul>
-                    <li>
-                        <a href="#">خانه</a>
-                    </li>
-                    <li>
-                        <a href="#">آهنگ ها</a>
-                    </li>
-                    <li>
-                        <a href="">دانلود</a>
-                    </li>
-                    <li class="main-header__nav__seperator"></li>
-                    <li>
-                        <a href="./favorites.html">موردعلاقه ها</a>
-                    </li>
-                    <li>
-                        <a href="">حساب کاربری</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        
-        <main>
-            <section>
-                <img src="#" alt="عکس آهنگ">
-                <h1>آهنگ زیبای محمد اصفهانی به نام مثل گل</h1>
-                <p>دسته بندی آهنگ: سنتی</p>
-                <p>تاریخ بارگذاری: 1400/1/1</p>
-            </section>
-            <section>
-                <h3>متن آهنگ</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores porro sunt dolores vel ea adipisci. Similique libero vitae harum placeat, earum corporis minus ea molestias, repellendus mollitia animi explicabo dolorem.
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil nemo commodi laborum aspernatur! Numquam animi ducimus libero quasi. Provident, dolor illum odio sunt maxime vitae animi hic corrupti ipsa quia.
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam hic soluta vel perspiciatis voluptatum incidunt nemo, aspernatur delectus quasi officia aliquid voluptate ratione voluptas sed quos accusantium sit, quod ea?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, quae sit? Architecto commodi dolor voluptatem repellat, suscipit id obcaecati, minima nulla, quia doloribus in tempore nesciunt recusandae veniam corporis hic!
-                </p>
-                <a href="#">دانلود</a>
-            </section>
-            <section>
-                <h3>نظرات</h3>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque id temporibus velit corporis repellat incidunt quos, minus modi, alias sit possimus omnis doloribus dignissimos totam dolore, nihil earum illo saepe.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sequi alias temporibus eveniet vitae, accusamus ut corporis et harum obcaecati velit adipisci perspiciatis tempore eos blanditiis facilis porro laboriosam labore!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt illo accusamus, veniam et inventore perspiciatis in nam dignissimos? Iusto error explicabo assumenda optio reprehenderit dolore minus, est alias esse vero.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quos sed, delectus sit perferendis aperiam quibusdam vel officia temporibus, rem ipsam dolorem reprehenderit placeat dolorum necessitatibus similique molestiae excepturi obcaecati?
-                </p>
-            </section>
-        </main>
+          </div>
+        </label>
+        <a class="main-header__logo-container" href="./home.html">
+          <svg class="main-header__logo-container__logo" fill="currentColor">
+            <use xlink:href="../res/images/utils/brand-logo.svg#logo" />
+          </svg>
+        </a>
+      </div>
+    </header>
 
-        <footer>
-          <hr>
-          <center><strong>Spotify</strong> - Copyright &copy; 2021 - تمامی حقوق محفوظ میباشد</center>
-        </footer>
+    <section class="song-banner page-section">
+      <div class="song-banner__inner page-section-inner">
+        <img src="../data/songs/1/image.jpg" alt="عکس آهنگ" />
+        <div>
+          <h2>مثل گل - محمد اصفهانی</h2>
+          <p>دسته بندی آهنگ: سنتی</p>
+          <p>تاریخ بارگذاری: 1400/1/1</p>
+        </div>
+      </div>
+    </section>
 
-    </body>
+    <main>
+      <section class="page-section page-section--main-row lyric-section">
+        <div class="page-section-inner">
+          <header class="page-section__header">
+            <h4 class="page-section__header__info">بخوانیم</h4>
+            <h2 class="page-section__header__title">متن آهنگ</h2>
+          </header>
+          <div class="page-section__body">
+            <p>
+              پدرا پدربزرگا ، مادرا مادربزرگا ، مثلِ گل مثلِ بهارین<br />
+              دلامون نازک و نرمه ، چشامون چشمه شرمه ، اشکامونو درنیارین<br />
+              کاشکی می شد برای بزرگترامون قصرای طلا می ساختیم<br />
+              مثِ آب چشمه ها آیینه هاشو صاف و پر جلا می ساختیم<br />
+              ابر فتنه وقتی سنگ غم می بارید ، سینه مونو سپر بلا می ساختیم<br />
+              چشامون دروغ نمیگن واسه ما چراغ راهین<br />
+              گرچه پشتتون خمیدس واسه ما پشت و پناهین<br />
+              ماها مثل شب و روزیم شما مثل مهر و ماهین<br />
+              کاشکی می شد با شما تو شهر عاشقا بمونیم<br />
+              مثل اون قدیم ندیما قصه وفا بخونیم<br />
+              رمز روزا رو بفهمیم<br />
+              راز شب هارو بدونیم
+            </p>
+          </div>
+          <footer class="page-section__footer">
+            <button href="#" class="primary">کپی کردن متن آهنگ</button>
+          </footer>
+        </div>
+      </section>
+      <section class="page-section page-section--main-row page-section--alternate download-section">
+        <div class="page-section-inner">
+          <header class="page-section__header">
+            <h4 class="page-section__header__info">دریافت فایل</h4>
+            <h2 class="page-section__header__title">دانلود موسیقی</h2>
+          </header>
+          <div class="page-section__body">
+            <center>
+              <button class="big wider">دانلود با کیفیت 128kbps</button>
+              <br />
+              <button class="big primary wider">دانلود با کیفیت 320kbps</button>
+            </center>
+          </div>
+        </div>
+      </section>
+      <section class="page-section page-section--main-row">
+        <div class="page-section-inner">
+          <header class="page-section__header">
+            <h4 class="page-section__header__info">دیدگاه مردم</h4>
+            <h2 class="page-section__header__title">نظرات</h2>
+          </header>
+          <div class="page-section__body">
+            <p>
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.<br />
+              چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+              کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.<br />
+              کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم
+              افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد
+              کرد.<br />
+              در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان
+              مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+              قرار گیرد.<br />
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.<br />
+              چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+              کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته
+            </p>
+          </div>
+          <footer class="page-section__footer">
+            <button href="#" class="primary">برای ثبت نظر وارد حساب کاربری خود شوید</button>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <center><strong>Spotify</strong> - Copyright &copy; 2021 - تمامی حقوق محفوظ میباشد</center>
+    </footer>
+  </body>
 </html>

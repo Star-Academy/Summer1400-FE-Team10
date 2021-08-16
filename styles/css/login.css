@@ -1,0 +1,109 @@
+body {
+  background-color: white;
+}
+body > main > article {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem 0 15rem;
+}
+@media (min-width: 540px) {
+  body > main > article {
+    margin: 8rem 0 13rem;
+  }
+}
+body > main > article > section {
+  flex: 1;
+}
+body > main > article > aside {
+  flex: 1;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+body > main > article > aside > img {
+  width: 100%;
+  max-width: 65rem;
+  margin-bottom: 4rem;
+}
+body > main > article > aside > img.signup-img {
+  margin-bottom: 6rem;
+}
+@media (min-width: 992px) {
+  body > main > article > aside {
+    display: flex;
+  }
+}
+
+.form-container {
+  width: 100%;
+  max-width: 42rem;
+  margin: auto;
+  padding: 2rem;
+}
+.form-container > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 4em;
+}
+.form-container > header h2 {
+  font-size: 2.8rem;
+}
+@media (min-width: 992px) {
+  .form-container form {
+    padding-right: 1.2rem;
+  }
+}
+.form-container label {
+  font-size: 1.4rem;
+}
+.form-container label.label-big-input {
+  font-size: 1.8rem;
+  display: block;
+  margin: 2em 0 0.8em;
+}
+.form-container label.label-big-input input {
+  display: block;
+  margin-top: 1.2rem;
+  width: 100%;
+  height: 4rem;
+  background-color: inherit;
+}
+.form-container label.label-checkbox input {
+  transform: translateY(0.25rem);
+}
+.form-container .login-submit-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4em;
+}
+.form-container .signup-submit-container {
+  text-align: left;
+  margin-top: 4em;
+}
+.form-container .signup-submit-container > button {
+  width: 100%;
+}
+.form-container .form-footer {
+  margin-top: 3em;
+  text-align: left;
+  font-size: 1.3rem;
+}
+@media (min-width: 992px) {
+  .form-container {
+    margin: 0;
+  }
+}
+
+.main-header__inner {
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  .main-header__inner {
+    justify-content: space-between;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

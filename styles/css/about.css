@@ -1,0 +1,18 @@
+body > main > article > section {
+  font-size: 1.6rem;
+}
+body > main > article > section > img {
+  width: 100%;
+}
+
+@media (max-width: 370px) {
+  main > article > section {
+    font-size: 1.4rem;
+  }
+  main > article > section > img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */
