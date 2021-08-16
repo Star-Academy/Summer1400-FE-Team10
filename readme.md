@@ -1,4 +1,4 @@
-# Team10 - Phase-01
+# Team10
 
 Summer 1400
 Front-End
