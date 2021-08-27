@@ -332,29 +332,65 @@ h6 {
 
 a {
   text-decoration: none;
+  color: inherit;
+}
+a.colored {
+  color: #0947f1;
+}
+a.colored:visited {
+  color: #791de2;
+}
+a.colored.static:visited {
+  color: #0947f1;
 }
 
 input[type=text],
 input[type=email],
-input[type=password] {
+input[type=password],
+input[type=number] {
   font-family: inherit;
-  border: solid 0.1rem #dedede;
+  border: solid 0.1rem transparent;
   border-radius: 0.3rem;
   padding: 0.2rem 0.8rem;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, background-color 0.2s;
   box-shadow: 0 0 0 0 rgba(29, 185, 84, 0.15);
   outline: none;
+  color: #65656f;
+  background-color: #f4f4f5;
+  height: 3rem;
 }
 input[type=text]::placeholder,
 input[type=email]::placeholder,
-input[type=password]::placeholder {
-  color: #ccc;
+input[type=password]::placeholder,
+input[type=number]::placeholder {
+  color: #c9c9c9;
 }
 input[type=text]:focus,
 input[type=email]:focus,
-input[type=password]:focus {
+input[type=password]:focus,
+input[type=number]:focus {
   box-shadow: 0 0 0 0.3rem rgba(29, 185, 84, 0.15);
   border-color: #61db8c;
+  background-color: #fefdfc !important;
+}
+input[type=text].onbg,
+input[type=email].onbg,
+input[type=password].onbg,
+input[type=number].onbg {
+  background-color: #ededef;
+}
+input[type=text].big,
+input[type=email].big,
+input[type=password].big,
+input[type=number].big {
+  height: 4rem;
+}
+input[type=text].english-right,
+input[type=email].english-right,
+input[type=password].english-right,
+input[type=number].english-right {
+  direction: ltr;
+  text-align: right;
 }
 
 button {
@@ -400,7 +436,10 @@ button.big {
 button.primary {
   background-color: #1db954;
   color: white;
-  border-color: #1db954;
+  border-color: transparent;
+}
+button.primary:disabled {
+  background-color: #61cd86;
 }
 button.tag {
   background-color: #f4f4f5;
@@ -459,6 +498,27 @@ label {
   cursor: pointer;
 }
 
+select {
+  font: inherit;
+  color: #65656f;
+  font-weight: 500;
+  line-height: 100%;
+  border-radius: 0.4rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  background-color: #f4f4f5;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.6rem;
+}
+select.small {
+  padding: 0.4rem 0.6rem 0.3rem;
+  font-size: 1.3rem;
+}
+select.onbg {
+  background-color: #ededef;
+}
+
 .main-footer {
   background-color: #191414;
   color: #f7f7fa;
@@ -470,6 +530,10 @@ ul,
 li {
   margin: 0;
   padding: 0;
+}
+
+ul {
+  list-style: none;
 }
 
 /*# sourceMappingURL=global.css.map */

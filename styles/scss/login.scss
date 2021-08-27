@@ -2,7 +2,7 @@
 @import './utils/colors.scss';
 
 body {
-  background-color: white;
+  background-color: $g10;
   & > main > article {
     display: flex;
     flex-direction: row;
@@ -14,10 +14,17 @@ body {
 
     & > section {
       flex: 1;
+
+      @include anim-fade-in-vertical(login-form, -3rem, 0.4s);
+      @media #{$tablet} {
+        @include anim-fade-in-horizontal(login-section, -5rem, 0.6s);
+      }
     }
 
     & > aside {
       flex: 1;
+      @include anim-fade-in-horizontal(login-aside, 5rem, 0.6s);
+
       display: none;
       align-items: center;
       justify-content: flex-end;
@@ -31,6 +38,7 @@ body {
       }
       @media #{$tablet} {
         display: flex;
+        @include anim-fade-in-horizontal(login-aside, 5rem, 0.6s);
       }
     }
   }
@@ -53,7 +61,7 @@ body {
   }
   & form {
     @media #{$tablet} {
-      padding-right: 1.2rem;
+      //padding-right: 1.2rem;
     }
   }
   & label {
@@ -61,15 +69,14 @@ body {
   }
   & label.label-big-input {
     font-size: 1.8rem;
+    font-weight: 500;
     display: block;
-    margin: 2em 0 0.8em;
+    margin: 2rem 0 0.5rem;
 
     & input {
-      display: block;
       margin-top: 1.2rem;
       width: 100%;
-      height: 4rem;
-      background-color: inherit;
+      //border: solid 0.1rem $c-iconbg;
     }
   }
   & label.label-checkbox {
@@ -114,5 +121,22 @@ body {
   justify-content: center;
   @media #{$tablet} {
     justify-content: space-between;
+  }
+}
+
+.input-error {
+  display: none;
+  margin: 0.6rem 1rem;
+  color: $c-error;
+  font-size: 1.2rem;
+  @include anim-fade-in-vertical(login-error, -1.5rem, 0.4s, ease-out);
+  &.shown {
+    display: block;
+  }
+  &.big {
+    height: 2rem;
+    margin: 1.5rem 0 -3.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
   }
 }

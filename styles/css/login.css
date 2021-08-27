@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color: #fefdfc;
 }
 body > main > article {
   display: flex;
@@ -13,12 +13,49 @@ body > main > article {
 }
 body > main > article > section {
   flex: 1;
+  animation: login-form 0.4s ease;
+}
+@keyframes login-form {
+  from {
+    transform: translateY(-3rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (min-width: 992px) {
+  body > main > article > section {
+    animation: login-section 0.6s ease;
+  }
+  @keyframes login-section {
+    from {
+      transform: translateX(-5rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
 body > main > article > aside {
   flex: 1;
+  animation: login-aside 0.6s ease;
   display: none;
   align-items: center;
   justify-content: flex-end;
+}
+@keyframes login-aside {
+  from {
+    transform: translateX(5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 body > main > article > aside > img {
   width: 100%;
@@ -31,6 +68,17 @@ body > main > article > aside > img.signup-img {
 @media (min-width: 992px) {
   body > main > article > aside {
     display: flex;
+    animation: login-aside 0.6s ease;
+  }
+  @keyframes login-aside {
+    from {
+      transform: translateX(5rem);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }
 
@@ -49,25 +97,18 @@ body > main > article > aside > img.signup-img {
 .form-container > header h2 {
   font-size: 2.8rem;
 }
-@media (min-width: 992px) {
-  .form-container form {
-    padding-right: 1.2rem;
-  }
-}
 .form-container label {
   font-size: 1.4rem;
 }
 .form-container label.label-big-input {
   font-size: 1.8rem;
+  font-weight: 500;
   display: block;
-  margin: 2em 0 0.8em;
+  margin: 2rem 0 0.5rem;
 }
 .form-container label.label-big-input input {
-  display: block;
   margin-top: 1.2rem;
   width: 100%;
-  height: 4rem;
-  background-color: inherit;
 }
 .form-container label.label-checkbox input {
   transform: translateY(0.25rem);
@@ -104,6 +145,33 @@ body > main > article > aside > img.signup-img {
   .main-header__inner {
     justify-content: space-between;
   }
+}
+
+.input-error {
+  display: none;
+  margin: 0.6rem 1rem;
+  color: #f14c62;
+  font-size: 1.2rem;
+  animation: login-error 0.4s ease-out;
+}
+@keyframes login-error {
+  from {
+    transform: translateY(-1.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.input-error.shown {
+  display: block;
+}
+.input-error.big {
+  height: 2rem;
+  margin: 1.5rem 0 -3.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=login.css.map */
