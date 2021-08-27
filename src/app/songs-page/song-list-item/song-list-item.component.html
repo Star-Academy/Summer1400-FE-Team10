@@ -1,0 +1,47 @@
+<div *ngIf="data" class="song-list-item">
+  <div>
+    <a routerLink="/songs/{{ data.id }}">
+      <img
+        [src]="data.cover"
+        class="music-cover"
+        alt="music cover image"
+        loading="lazy"
+        (load)="imageLoaded()"
+        [class.music-cover--hidden]="!isImageLoaded"
+      />
+      <img
+        src="assets/images/utils/empty-cover.jpg"
+        class="music-cover-placeholder"
+        alt=""
+        [class.music-cover-placeholder--hidden]="isImageLoaded"
+        [class.music-cover-placeholder--hidden--no-display]="isPlaceholderHidden"
+      />
+    </a>
+  </div>
+  <div class="song-info">
+    <div class="song-title">
+      <a routerLink="/songs/{{ data.id }}">{{ data.name }}</a>
+    </div>
+    <div class="song-subtitle">{{ data.artist }}</div>
+
+    <div class="song-footer">
+      <div class="song-date">
+        {{ data.publish_date | date: 'shortDate' }}
+      </div>
+      <div class="spacer"></div>
+      <svg
+        class="song-icon song-icon--heart"
+        [class.disabled]="likeDisabled"
+        [class.active]="liked"
+        id="heart-icon"
+        fill="currentColor"
+        (click)="like()"
+      >
+        <use xlink:href="assets/images/utils/icons/heart-fill.svg#icon" class="fill" />
+      </svg>
+      <svg class="song-icon" id="play-icon" fill="currentColor">
+        <use xlink:href="assets/images/utils/icons/play.svg#icon" />
+      </svg>
+    </div>
+  </div>
+</div>

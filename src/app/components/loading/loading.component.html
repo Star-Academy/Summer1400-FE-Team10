@@ -1,0 +1,6 @@
+<div class="loading-box" [class.loading-box--small]="type == 'small'" [class.loading-box--big]="type == 'big'">
+  <svg fill="currentColor" class="loading-icon">
+    <use xlink:href="assets/images/utils/icons/loading-process.svg#icon" />
+  </svg>
+  <span *ngIf="hasText">در حال بارگیری</span>
+</div>

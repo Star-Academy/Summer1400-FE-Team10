@@ -1,0 +1,95 @@
+@import 'src/style-imports.scss';
+
+.song-banner {
+  background: $g1;
+  background-position: center;
+  background-size: cover;
+  $cfrom: transparentize($g1, 0.02);
+  $cto: transparentize($g1, 0.2);
+  --bg-image: transparent;
+  background-image: linear-gradient(to bottom, $cfrom 50%, $cto), var(--bg-image);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8em;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: $g8;
+
+    & > img {
+      $size: 25rem;
+      width: $size;
+      max-height: $size;
+      border-radius: 1.25rem;
+    }
+
+    & > div {
+      flex: 1;
+      padding: 3rem 0 0;
+      & > h2 {
+        color: $g10;
+        margin-bottom: 1rem;
+      }
+      & > h3 {
+        color: $g9;
+        font-weight: 400;
+        margin-bottom: 3.5rem;
+      }
+    }
+  }
+  @media #{$mobtab} {
+    &__inner {
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: inherit;
+      font-size: 1em;
+      padding-bottom: 4rem;
+
+      & > img {
+        $size: 20rem;
+        width: $size;
+        max-height: $size;
+      }
+
+      & > div {
+        padding: 3rem 3rem 0;
+        & > h2 {
+          margin-bottom: 1rem;
+        }
+        & > h3 {
+          margin-bottom: 6.5rem;
+        }
+      }
+    }
+  }
+}
+
+.lyric-section {
+  & p {
+    text-align: center;
+    line-height: 3.2rem;
+  }
+}
+
+.download-section {
+  & .page-section__body {
+    text-align: center;
+    & button {
+      margin-top: 2rem;
+    }
+  }
+}
+
+#song-player {
+  text-align: center;
+  padding: 0 2rem;
+  & .player {
+    width: 100%;
+    border-radius: 100rem;
+    border: solid 0.1rem $c-iconbg;
+  }
+}

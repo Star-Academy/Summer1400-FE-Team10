@@ -1,0 +1,71 @@
+<div class="page">
+  <main-header></main-header>
+
+  <section class="song-banner page-section" id="song-banner">
+    <div class="song-banner__inner page-section-inner">
+      <img src="assets/images/utils/empty-cover.jpg" alt="عکس آهنگ" id="song-cover" />
+      <div id="song-info">
+        <h2 id="song-name">{{ id }}</h2>
+        <h3 id="song-artist"></h3>
+        <p>تاریخ انتشار: <span id="song-publish-date"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="page-section page-section--main-row page-section--alternate">
+      <div class="page-section-inner">
+        <div class="page-section__body" id="song-player"></div>
+      </div>
+    </section>
+    <section class="page-section page-section--main-row lyric-section">
+      <div class="page-section-inner">
+        <header class="page-section__header">
+          <h4 class="page-section__header__info">بخوانیم</h4>
+          <h2 class="page-section__header__title">متن آهنگ</h2>
+        </header>
+        <div class="page-section__body">
+          <p id="song-lyrics"></p>
+        </div>
+        <footer class="page-section__footer">
+          <button id="song-copy-lyrics" class="primary">کپی کردن متن آهنگ</button>
+        </footer>
+      </div>
+    </section>
+    <page-section [title]="'دانلود موسیقی'" [description]="'دریافت فایل'">
+      <div body>
+        <a id="song-download" download><button class="big wider">دانلود با کیفیت 128kbps</button></a>
+        <br />
+        <a id="song-download-hq" download><button class="big primary wider">دانلود با کیفیت 320kbps</button></a>
+      </div>
+    </page-section>
+    <section class="page-section page-section--main-row">
+      <div class="page-section-inner">
+        <header class="page-section__header">
+          <h4 class="page-section__header__info">دیدگاه مردم</h4>
+          <h2 class="page-section__header__title">نظرات</h2>
+        </header>
+        <div class="page-section__body">
+          <p>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.<br />
+            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.<br />
+            کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها
+            شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.<br />
+            در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان
+            مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
+            قرار گیرد.<br />
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.<br />
+            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+            کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته
+          </p>
+        </div>
+        <footer class="page-section__footer">
+          <button href="#" class="primary">برای ثبت نظر وارد حساب کاربری خود شوید</button>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <main-footer></main-footer>
+</div>

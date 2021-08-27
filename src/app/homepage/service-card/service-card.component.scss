@@ -1,0 +1,56 @@
+@import 'src/style-imports.scss';
+
+.service-card {
+  padding: 2rem;
+  text-align: center;
+  --anim-delay: 1;
+
+  &__icon {
+    background: linear-gradient(135deg, white 0%, $g9 100%);
+    margin: 0 auto 2rem;
+    padding: 1rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    line-height: 15rem;
+
+    & > svg {
+      $size: 6rem;
+      width: $size;
+      height: $size;
+      fill: url('#gradient') #{$g3};
+
+      & #gradient {
+        --color-stop: #{$secondary-color};
+        --color-bot: #{$primary-color};
+      }
+    }
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $c-title;
+  }
+  &__info {
+    text-align: center;
+    color: $c-subtitle;
+  }
+
+  opacity: 0;
+
+  &.anim-start {
+    animation: service-card-anim 0.7s forwards;
+    animation-delay: calc(var(--anim-delay) * 0.12s);
+
+    @keyframes service-card-anim {
+      from {
+        opacity: 0;
+        transform: translateY(-10rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0rem);
+      }
+    }
+  }
+}

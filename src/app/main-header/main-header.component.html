@@ -1,0 +1,55 @@
+<header class="main-header" [class.over]="isOver">
+  <div class="main-header__inner">
+    <nav class="main-header__nav">
+      <ul>
+        <li>
+          <a routerLink="/">خانه</a>
+        </li>
+        <li>
+          <a routerLink="/songs">آهنگ ها</a>
+        </li>
+        <li class="main-header__nav__seperator"></li>
+        <li>
+          <a routerLink="/signup">ثبت نام</a>
+        </li>
+        <li>
+          <a routerLink="/login">ورود</a>
+        </li>
+      </ul>
+    </nav>
+    <label class="main-header__hamburger-container">
+      <input type="checkbox" />
+      <svg class="main-header__hamburger-container__hamburger" fill="currentColor">
+        <use xlink:href="assets/images/utils/icons/menu.svg#icon" />
+      </svg>
+      <div class="ham-menu-container">
+        <div class="ham-menu-container__ham-menu">
+          <ul>
+            <li><a></a></li>
+            <li>
+              <a href="./home.html">خانه</a>
+            </li>
+            <li>
+              <a href="./songs.html">آهنگ ها</a>
+            </li>
+            <li>
+              <a href="">دانلود</a>
+            </li>
+            <li><a></a></li>
+            <li>
+              <a href="./signup.html">ثبت نام</a>
+            </li>
+            <li>
+              <a href="./login.html">ورود</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </label>
+    <a class="main-header__logo-container" href="./home.html">
+      <svg class="main-header__logo-container__logo" fill="currentColor">
+        <use xlink:href="assets/images/utils/brand-logo.svg#logo" />
+      </svg>
+    </a>
+  </div>
+</header>

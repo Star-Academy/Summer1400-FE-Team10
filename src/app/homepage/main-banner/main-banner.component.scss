@@ -1,0 +1,139 @@
+@import 'src/style-imports.scss';
+
+.main-banner {
+  height: 100vh;
+  $cfrom: darken(transparentize($primary-color, 0.4), 30);
+  $cto: darken(transparentize($secondary-color, 0.7), 50);
+  $img1: url('../../../assets/images/home/tile-2.png');
+  $img2: url('../../../assets/images/home/banner-7.jpg');
+  background-image: linear-gradient(-115deg, $cfrom 60%, $cto 100%), $img1, $img2;
+  background-size: cover, 0.4rem, cover;
+  background-position-y: center;
+  background-position-x: 30%;
+  background-repeat: no-repeat, repeat, repeat;
+  background-blend-mode: normal, normal, normal;
+
+  transition: background 0.3s;
+
+  margin-top: -5rem;
+
+  @media #{$tablet} {
+    margin-top: -8rem;
+    $cfrom: transparentize($primary-color, 0.4);
+    $cto: transparentize($secondary-color, 0.7);
+    $cblack: transparentize($g1, 0.15);
+    background-image: linear-gradient(-115deg, $cblack 60%, $cfrom 60%, $cto 100%), $img1, $img2;
+  }
+
+  min-height: 50rem;
+  color: $g9;
+
+  position: relative;
+
+  & > .page-section-inner {
+    height: 100%;
+  }
+
+  &__body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & .flex-spacer {
+      flex: 0.4;
+      &:first-of-type {
+        flex: 0.6;
+      }
+    }
+
+    &__title-box {
+      animation: titlebox 0.8s ease-out;
+      @keyframes titlebox {
+        from {
+          transform: translateY(-10rem);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+
+    &__title {
+      font-weight: 100;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    &__slogan {
+      font-weight: 400;
+      & span {
+        color: $primary-color;
+      }
+      text-align: center;
+    }
+
+    &__info {
+      margin: auto;
+      margin-top: 4rem;
+      width: 20rem;
+      font-size: 1.3rem;
+      font-weight: 100;
+      line-height: 2.4rem;
+      text-align: center;
+    }
+
+    &__learn-more {
+      margin-bottom: 4rem;
+      animation: learnmore 0.6s ease-out;
+      @keyframes learnmore {
+        from {
+          transform: translateY(5rem);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    }
+
+    @media #{$mobile} {
+      align-items: center;
+      &__slogan {
+        text-align: center;
+        font-size: 2.6rem;
+      }
+    }
+
+    @media #{$mobtab} {
+      align-items: flex-start;
+      padding-right: 5rem;
+      &__title {
+        text-align: right;
+        font-size: 2.4rem;
+      }
+      &__slogan {
+        text-align: right;
+        font-size: 3.6rem;
+      }
+      &__info {
+        width: 32rem;
+        font-size: 1.4rem;
+        text-align: right;
+        margin-right: 0;
+      }
+
+      &__learn-more {
+        margin-bottom: 8rem;
+      }
+    }
+
+    @media #{$tablet} {
+      &__slogan {
+        font-size: 4.6rem;
+      }
+    }
+  }
+}

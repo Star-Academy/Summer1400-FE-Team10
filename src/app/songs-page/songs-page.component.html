@@ -1,0 +1,86 @@
+<div class="page">
+  <main-header></main-header>
+  <main>
+    <section class="page-section page-section--alternate page-section--main-row">
+      <div class="page-section-inner">
+        <header class="page-section__header">
+          <h2 class="page-section__header__title">آهنگ ها</h2>
+          <div class="page-section__header__tags">
+            <button class="tag">Pop</button>
+            <button class="tag">Country</button>
+            <button class="tag">Rock</button>
+            <button class="tag">Hip-Hop</button>
+            <select id="addtag" class="onbg small" name="addtag">
+              <option value="option">اضافه کردن تگ</option>
+              <option value="pop">Pop</option>
+              <option value="rock">Rock</option>
+              <option value="classic">Classic</option>
+              <option value="country">Country</option>
+              <option value="jazz">Jazz</option>
+              <option value="persian_classic">سنتی ایرانی</option>
+              <option value="hip_hop">Hip-Hop</option>
+            </select>
+          </div>
+        </header>
+        <div class="page-section__body main-song-list-body">
+          <ul class="main-song-list" id="main-song-list" *ngIf="!isLoading">
+            <li *ngFor="let item of list" class="main-song-list__item">
+              <song-list-item [data]="item"></song-list-item>
+            </li>
+          </ul>
+          <ng-container *ngIf="isLoading">
+            <div class="spacer"></div>
+            <loading [hasText]="true" [type]="'normal'"></loading>
+            <div class="spacer"></div>
+          </ng-container>
+        </div>
+        <footer class="page-section__footer main-song-list-footer">
+          <div class="pagination">
+            <ul>
+              <li class="pagination__right-arrow">
+                <svg fill="currentColor">
+                  <use xlink:href="assets/images/utils/icons/right-arrow.svg#icon" />
+                </svg>
+              </li>
+              <li class="wide">
+                <ul id="pagination__numbers">
+                  <li>1</li>
+                  <li>2</li>
+                  <li class="noninteractable">...</li>
+                  <li>4</li>
+                  <li class="current noninteractable">5</li>
+                  <li>6</li>
+                  <li class="noninteractable">...</li>
+                  <li>9</li>
+                  <li>10</li>
+                </ul>
+              </li>
+              <li class="pagination__left-arrow">
+                <svg fill="currentColor">
+                  <use xlink:href="assets/images/utils/icons/right-arrow.svg#icon" />
+                </svg>
+              </li>
+            </ul>
+          </div>
+          <div class="pagination-options">
+            <label>
+              <span>در هر صفحه</span>
+              <select class="onbg" id="song-items-per-page">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </label>
+            <label>
+              <span>برو به صفحه</span>
+              <input type="number" class="onbg" id="song-page-num-input" min="1" />
+            </label>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+  <main-footer></main-footer>
+</div>

@@ -1,0 +1,107 @@
+<div class="page">
+  <main-header></main-header>
+
+  <main>
+    <article>
+      <aside>
+        <img src="assets/images/login/login-image.jpg" class="signup-img" alt="login page image" />
+      </aside>
+      <section>
+        <div class="form-container">
+          <header>
+            <h2>ثبت نام</h2>
+            <label>یا <a routerLink="/login" class="colored static">ورود به حساب کاربری</a></label>
+          </header>
+          <form (ngSubmit)="signup()" ngNativeValidate>
+            <label class="label-big-input">
+              نام کاربری
+              <input
+                type="text"
+                class="big english-right"
+                placeholder="نام کاربری خود را وارد کنید"
+                name="username"
+                id="username"
+                [(ngModel)]="username"
+                required
+              />
+              <div class="input-error" [class.shown]="errors.username">{{ errors.username || '' }}</div>
+            </label>
+            <label class="label-big-input">
+              ایمیل
+              <input
+                type="email"
+                class="big english-right"
+                placeholder="ایمیل خود را وارد کنید"
+                name="email"
+                id="email"
+                [(ngModel)]="email"
+                required
+              />
+              <div class="input-error" [class.shown]="errors.email">{{ errors.email || '' }}</div>
+            </label>
+            <label class="label-big-input">
+              رمز عبور
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                class="big english-right"
+                id="password"
+                placeholder="رمز عبور خود را وارد کنید"
+                name="password"
+                [(ngModel)]="password"
+                required
+              />
+              <div class="input-error" [class.shown]="errors.password">{{ errors.password || '' }}</div>
+            </label>
+            <label class="label-big-input">
+              تکرار رمز عبور
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                class="big english-right"
+                placeholder="رمز عبور خود را تکرار کنید"
+                name="confirmPassword"
+                [(ngModel)]="confirmPassword"
+                required
+              />
+              <div class="input-error" [class.shown]="errors.confirmPassword">{{ errors.confirmPassword || '' }}</div>
+            </label>
+            <label class="label-checkbox">
+              <input type="checkbox" [(ngModel)]="showPassword" name="showPassword" />
+              نمایش رمز عبور
+            </label>
+
+            <label class="label-big-input">
+              نام
+              <input
+                type="text"
+                class="big"
+                placeholder="نام خود را وارد کنید"
+                [(ngModel)]="firstname"
+                name="firstname"
+              />
+              <div class="input-error" [class.shown]="errors.firstname">{{ errors.firstname || '' }}</div>
+            </label>
+            <label class="label-big-input">
+              نام خانوادگی
+              <input
+                type="text"
+                class="big"
+                placeholder="نام خانوادگی خود را وارد کنید"
+                [(ngModel)]="lastname"
+                name="lastame"
+              />
+              <div class="input-error" [class.shown]="errors.lastname">{{ errors.lastname || '' }}</div>
+            </label>
+            <div class="submit-container">
+              <button type="submit" class="big primary" [disabled]="loading">ثبت نام</button>
+            </div>
+            <footer>
+              <div class="input-error big" [class.shown]="errors.main">{{ errors.main || '' }}</div>
+            </footer>
+          </form>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <main-footer></main-footer>
+</div>

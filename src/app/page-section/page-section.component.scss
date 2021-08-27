@@ -1,0 +1,72 @@
+@import 'src/style-imports.scss';
+
+.page-section {
+  width: 100%;
+  background-color: white;
+  &--alternate {
+    background-color: $g8;
+  }
+  &--main-row {
+    padding: 8rem 0;
+  }
+
+  &__header {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    &--margin {
+      margin-bottom: 6rem;
+    }
+
+    &__info {
+      color: $primary-color;
+      font-weight: 500;
+    }
+    &__title {
+      color: $c-title;
+      font-size: 2.8rem;
+      margin-top: 1.2rem;
+    }
+  }
+
+  &__body {
+    & p {
+      color: $c-subtitle;
+      text-align: justify;
+      line-height: 2.6rem;
+    }
+  }
+  &__footer {
+    margin-top: 4rem;
+    text-align: center;
+    &--left {
+      text-align: left;
+    }
+    &--right {
+      text-align: right;
+    }
+  }
+}
+
+.page-section-inner {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @media #{$mobile} {
+    max-width: unset;
+  }
+
+  @media #{$tablet} {
+    max-width: 96rem;
+  }
+
+  @media #{$desktop} {
+    max-width: 117rem;
+  }
+  @media #{$wide-desktop} {
+    max-width: 157rem;
+  }
+}

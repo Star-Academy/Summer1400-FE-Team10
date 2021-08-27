@@ -1,0 +1,60 @@
+@import 'src/style-imports';
+
+.loading-box {
+  user-select: none;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: transparentize($c-iconfg, 0.85);
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  transition: transform 0.2s, opacity 0.2s, height 0.2s, margin 0.2s;
+
+  &--hidden {
+    opacity: 0;
+    transform: translateY(-10%);
+    height: 0;
+  }
+  &--small {
+    flex-direction: row;
+    height: 2rem;
+    padding: 0;
+    margin-bottom: -2rem;
+    font-size: 1.4rem;
+    & svg.loading-icon {
+      margin-bottom: 0;
+      margin-left: 2rem;
+      $size: 3rem;
+      width: $size;
+      height: $size;
+    }
+  }
+  &--big {
+    font-size: 1.8rem;
+
+    & svg.loading-icon {
+      $size: 6.5rem;
+      width: $size;
+      height: $size;
+    }
+  }
+
+  & svg {
+    $size: 5rem;
+    width: $size;
+    height: $size;
+    margin-bottom: 2rem;
+    animation: loadingRotate 1s infinite linear;
+    @keyframes loadingRotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

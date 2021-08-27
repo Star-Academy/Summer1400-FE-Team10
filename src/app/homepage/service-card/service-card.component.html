@@ -1,0 +1,17 @@
+<div class="service-card" [class.anim-start]="scrolled" [style.--anim-delay]="id">
+  <div class="service-card__icon">
+    <svg fill="currentColor">
+      <defs>
+        <linearGradient id="gradient" x2="0.35" y2="1">
+          <stop offset="0%" stop-color="var(--color-stop)" />
+          <stop offset="100%" stop-color="var(--color-bot)" />
+        </linearGradient>
+      </defs>
+      <use [attr.xlink:href]="icon" />
+    </svg>
+  </div>
+  <div class="service-card__title">{{ title }}</div>
+  <p class="service-card__info">
+    <ng-content></ng-content>
+  </p>
+</div>

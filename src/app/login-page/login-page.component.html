@@ -1,0 +1,72 @@
+<div class="page">
+  <!--
+    <script src="../scripts/global/main-server-data-api.js"></script>
+    <script src="../scripts/global/storage.js"></script>
+    <script src="../scripts/login.js" defer></script>
+  -->
+
+  <main-header></main-header>
+
+  <main>
+    <article>
+      <aside>
+        <img src="assets/images/login/login-image.jpg" alt="login page image" />
+      </aside>
+      <section>
+        <div class="form-container">
+          <header>
+            <h2>ورود</h2>
+            <label>یا <a class="colored static" routerLink="/signup">ساخت حساب جدید</a></label>
+          </header>
+          <form (ngSubmit)="login()" ngNativeValidate>
+            <label class="label-big-input">
+              نام کاربری
+              <input
+                type="text"
+                class="big english-right"
+                placeholder="نام کاربری خود را وارد کنید"
+                name="username"
+                [(ngModel)]="username"
+                id="username"
+                required
+              />
+              <div class="input-error" [class.shown]="errors.username">{{ errors.username || '' }}</div>
+            </label>
+            <label class="label-big-input">
+              رمز عبور
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                class="big english-right"
+                placeholder="رمز عبور خود را وارد کنید"
+                name="password"
+                [(ngModel)]="password"
+                id="password"
+                required
+              />
+              <div class="input-error" [class.shown]="errors.password">{{ errors.password || '' }}</div>
+            </label>
+            <label class="label-checkbox">
+              <input type="checkbox" [(ngModel)]="showPassword" name="showPassword" />
+              نمایش رمز عبور
+            </label>
+            <div class="submit-container">
+              <button type="submit" class="primary submit" [disabled]="loading" id="submit">ورود</button>
+            </div>
+            <div class="login-options">
+              <label class="label-checkbox">
+                <input type="checkbox" [(ngModel)]="rememberMe" name="rememberMe" />
+                مرا به خاطر داشته باش
+              </label>
+              <a class="colored static" routerLink="."> رمز خود را فراموش کرده‌اید؟ </a>
+            </div>
+            <footer>
+              <div class="input-error big" [class.shown]="errors.main">{{ errors.main || '' }}</div>
+            </footer>
+          </form>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <main-footer></main-footer>
+</div>

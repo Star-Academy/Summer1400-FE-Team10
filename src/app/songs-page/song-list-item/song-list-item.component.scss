@@ -1,0 +1,122 @@
+@import 'src/style-imports.scss';
+
+.song-list-item {
+  font-size: 1.3rem;
+  @media #{$tablet} {
+    font-size: 1.5rem;
+  }
+  color: $c-title;
+  border-radius: 1rem;
+
+  $img-size: 20rem;
+
+  position: relative;
+
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background-color: $g10;
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 4rem -2rem #00000041;
+  }
+
+  & .song-info {
+    padding: 0.5rem 1rem;
+  }
+
+  & .music-cover,
+  & .music-cover-placeholder {
+    width: 100%;
+    border-radius: 0.6rem;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(0);
+  }
+
+  & .music-cover-placeholder--hidden {
+    transform: translateY(1rem);
+    &--no-display {
+      display: none;
+    }
+  }
+
+  & .music-cover--hidden,
+  & .music-cover-placeholder--hidden {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+  }
+
+  & .song-title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: $c-title;
+  }
+  & .song-subtitle {
+    margin-top: 0.4rem;
+    color: $c-subtitle;
+    font-size: 1.4rem;
+  }
+  & .song-date {
+    color: $c-subtitle;
+    font-size: 1.3rem;
+  }
+
+  & .song-icon {
+    margin: 0 0.4rem;
+    color: $c-iconfg;
+    $size: 1.5rem;
+    width: $size;
+    height: $size;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.2s;
+
+    @media #{$tablet} {
+      $size: 1.6rem;
+      width: $size;
+      height: $size;
+    }
+
+    &--heart {
+      & .fill {
+        fill: transparent;
+        stroke: currentColor;
+        stroke-width: 0.3rem;
+        transition: fill 0.2s;
+        stroke-linejoin: round;
+      }
+      &:hover {
+        & .fill {
+          fill: currentColor;
+          stroke: currentColor;
+          stroke-width: 0.2rem;
+        }
+      }
+      &.active {
+        color: $c-heart;
+        & .fill {
+          fill: currentColor;
+          stroke: currentColor;
+          stroke-width: 0.2rem;
+        }
+
+        &.disabled {
+          color: lighten($c-heart, 20) !important;
+        }
+      }
+
+      &.disabled {
+        color: lighten($c-iconfg, 60) !important;
+      }
+    }
+  }
+
+  & .song-footer {
+    padding: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    & .spacer {
+      flex: 1;
+    }
+  }
+}

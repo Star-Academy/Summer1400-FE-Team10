@@ -1,0 +1,10 @@
+<section class="page-section page-section--main-row" [class.page-section--alternate]="alternate">
+  <div class="page-section-inner">
+    <header class="page-section__header">
+      <h4 *ngIf="description" class="page-section__header__info">{{ description }}</h4>
+      <h2 *ngIf="title" class="page-section__header__title">{{ title }}</h2>
+    </header>
+    <div class="page-section__body services-row"><ng-content select="[body]"></ng-content></div>
+    <footer *ngIf="hasFooter" class="page-section__footer"><ng-content select="[footer]"></ng-content></footer>
+  </div>
+</section>

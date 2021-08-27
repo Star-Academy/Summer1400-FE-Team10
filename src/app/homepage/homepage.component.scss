@@ -1,0 +1,87 @@
+@import 'src/style-imports.scss';
+
+.oo--kk {
+  padding: 0;
+  & > li {
+    color: white;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: lightgray;
+  }
+}
+
+.section-about-us {
+  &__important-text {
+    font-size: 1.6rem;
+    width: 100%;
+    margin: auto;
+    line-height: 4rem !important;
+    text-align: center !important;
+
+    @media #{$mobtab} {
+      width: 70%;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.services-row {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media #{$mobtab} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media #{$tablet} {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.row-parts {
+  display: flex;
+  flex-direction: column;
+  @media #{$tablet} {
+    flex-direction: row;
+  }
+  gap: 4rem;
+
+  &--reverse {
+    @media #{$tablet} {
+      flex-direction: row-reverse;
+    }
+  }
+
+  & > div {
+    flex: 1;
+  }
+
+  & > div.row-part--big {
+    flex: 1.2;
+  }
+}
+.row-part {
+  &--align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &--text {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    & .spacer {
+      flex: 1;
+    }
+    & h2 {
+      font-size: 2.6rem;
+    }
+    & p {
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+.general-img {
+  border-radius: 0.8rem;
+}
